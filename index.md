@@ -30,5 +30,6 @@ a damp maple leaf
 > # PROFILE
 
 ┌ = = = = = = = = = = = ┐<br/>
-|a                      |<br/>
+|                       |<br/>
+<img src="/contents/elmo.png">
 
