@@ -1,7 +1,7 @@
 ---
-title: /
+title: a damp maple leaf
 layout: home
-permalink: a damp maple leaf
+permalink: /
 ---
 
 # Lorem ipsum
