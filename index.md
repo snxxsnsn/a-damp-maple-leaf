@@ -19,7 +19,7 @@ permalink: /
 
 <br>
 
-# 𝐚 𝐝𝐚𝐦𝐩 𝐦𝐚𝐩𝐥𝐞 𝐥𝐞𝐚𝐟
+# a damp maple leaf
 
 습작 및 여러 생각들과 기억들을 남기는 공간입니다.
 
@@ -31,7 +31,7 @@ permalink: /
 
 ┌ = = = = = = = = = = = = ┐<br/>
 
-| ![poster](/contents/elmo.png){: width="180px" height="120px"} |
+　![poster](/contents/elmo.png){: width="30%" height="15%"}
 
 └ = = = = = = = = = = = = ┘
 
