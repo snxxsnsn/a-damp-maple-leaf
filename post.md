@@ -1,7 +1,7 @@
 ---
-layout: home
+layout: postlist
 title: / post
-permalink: /post/
+permalink: /about/
 ---
 
 # jekyll-theme-console
