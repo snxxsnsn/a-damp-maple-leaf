@@ -1,5 +1,5 @@
 ---
-title: a damp maple leaf
+title: home
 layout: home
 permalink: /
 ---
