@@ -27,6 +27,6 @@ a damp maple leaf
 
 - - -
 
-<span style="font-size:250%"> 폰트사이즈 250 </span>  
+# POST
 
 
