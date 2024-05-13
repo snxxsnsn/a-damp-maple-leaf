@@ -26,10 +26,3 @@ permalink: /
 
 - - -
 
-# PROFILE<br>
-┌ = = = = = = = = = ┐<br/>
-
-　![poster](/contents/elmo.png){: width="120px" height="70px"}
-
-└ = = = = = = = = = ┘
-
