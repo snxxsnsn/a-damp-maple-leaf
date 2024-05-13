@@ -29,7 +29,7 @@ permalink: /
 # PROFILE<br>
 ┌ = = = = = = = = = ┐<br/>
 
-　![poster](/contents/elmo.png){: width="100px" height="50px"}
+　![poster](/contents/elmo.png){: width="150px" height="110px"}
 
 └ = = = = = = = = = ┘
 
