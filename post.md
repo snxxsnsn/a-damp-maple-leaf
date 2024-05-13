@@ -1,5 +1,5 @@
 ---
-layout: postlist
+layout: page
 title: / post list
 permalink: /post
 ---
