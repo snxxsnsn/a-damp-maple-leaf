@@ -41,7 +41,7 @@ permalink: /
 
 ┌ = = = = = = = = = = = ┐<br/>
 
-　　![poster](/contents/elmo.png){: width="180px" height="120px"}
+　![poster](/contents/elmo.png){: width="180px" height="120px"}
 
 └ = = = = = = = = = = = ┘
 
