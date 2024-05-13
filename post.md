@@ -1,7 +1,7 @@
 ---
+title: /peter
 layout: page
-title: / post list
-permalink: /post
+permalink: /peter
 ---
 
 # jekyll-theme-console
