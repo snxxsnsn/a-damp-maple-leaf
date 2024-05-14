@@ -26,7 +26,6 @@ permalink: /
 
 - - -
 
-
 <br>
 # PROFILE
 
@@ -35,6 +34,6 @@ permalink: /
       <img src="contents/elmo.png" alt="elmo">
       <div class="divider"></div> <!-- 구분선 -->
       <h1>XENA</h1>
-      <p>으에으에으에</p>
+      <p>으에으에으웨옹</p>
 </div>
 
