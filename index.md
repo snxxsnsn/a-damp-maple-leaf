@@ -36,6 +36,6 @@ permalink: /
       <h1>XENA</h1>
       <sup>2002.08.30</sup>
       <p>-</p>
-      <p>미옹미옹</p>
+      <p>나예요</p>
 </div>
 
