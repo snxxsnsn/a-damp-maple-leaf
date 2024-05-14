@@ -27,6 +27,9 @@ permalink: /
 - - -
 
 
+<br>
+# PROFILE
+
 
 <div class="profile-box">
       <img src="contents/elmo.png" alt="elmo">
