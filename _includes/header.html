@@ -2,12 +2,6 @@
 <header>
     <div class="container">
       <div class="menu">
-<div class="profile-box">
-    <img src="contents/elmo.png" alt="elmo">
-    <div class="divider"></div> <!-- 구분선 -->
-    <h2>임세나</h2>
-    <p>으에으에으에</p>
-</div>
     <ul>
       {%- for path in page_paths -%}
         {%- assign my_page = site.pages | where: "path", path | first -%}
