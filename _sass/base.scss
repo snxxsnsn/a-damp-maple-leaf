@@ -30,7 +30,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     width: 30%; /* 프로필 박스 너비 */
     height: 50%; /* 프로필 박스 높이 */
     text-align: left; /* 텍스트 왼쪽 정렬 */
-    margin: 2%;
 }
 
 .profile-box img {
@@ -40,7 +39,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     margin: 0 auto; /* 가로 방향 가운데 정렬 */
     border-radius: 50%; /* 프로필 이미지를 동그랗게 만듭니다. */
     margin-bottom: 18px; /* 이미지와 텍스트 간격 */
-    overflow: hidden; /* 넘치는 부분을 숨김 */ 
 }
 
 .profile-box .divider {
