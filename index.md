@@ -25,7 +25,6 @@ permalink: /
 
 
 - - -
-
 <br>
 # PROFILE
 
@@ -36,6 +35,6 @@ permalink: /
       <h1>XENA</h1>
       <sup>2002.08.30</sup>
       <p>-</p>
-      <p>나예요</p>
+      <p>미옹</p>
 </div>
 
