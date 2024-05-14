@@ -12,4 +12,5 @@ This theme supports syntax respectively code highlighting. Below you find some e
 {% highlight ruby %}
 def foo
   puts 'foo'
-end
+
+
