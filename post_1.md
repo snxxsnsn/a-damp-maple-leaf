@@ -1,7 +1,7 @@
 ---
 title: / 일기
 layout: postlist1
-permalink: /post
+permalink: / 일기
 ---
 
 POST
