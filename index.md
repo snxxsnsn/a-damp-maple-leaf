@@ -26,6 +26,8 @@ permalink: /
 
 - - -
 
+
+
 <div class="profile-box">
       <img src="contents/elmo.png" alt="elmo">
       <div class="divider"></div> <!-- 구분선 -->
