@@ -34,7 +34,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 .profile-box img {
-    max-width: 100%; /* 프로필 이미지 너비 */
+    width: auto; /* 프로필 이미지 너비 */
     max-height: 100%; /* 프로필 이미지 높이 */
     display: block;
     margin: 0 auto; /* 가로 방향 가운데 정렬 */
