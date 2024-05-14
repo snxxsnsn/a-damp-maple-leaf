@@ -1,7 +1,7 @@
 ---
 title: / 습작
 layout: postlist
-permalink: /post
+permalink: /postlist
 ---
 
 POST
