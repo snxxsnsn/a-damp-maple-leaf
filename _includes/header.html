@@ -1,10 +1,20 @@
 {%- assign page_paths = site.header_pages | default: default_paths -%}
 <header>
-<div class="profile-box">
+<style>
+    .container {
+        display: flex;
+    }
+    .profile-box {
+        order: -1; /* 다른 요소들보다 앞에 배치 */
+        /* 추가적인 스타일링 */
+    }
+</style>
+    <div class="container">
+            <div class="profile-box">
             <img src="contents/elmo.png" alt="elmo">
             <h2>임세나</h2>
             <p>으에으에으에으에</p>
-    <div class="container">
+            </div>
   <div class="menu">
     <ul>
       {%- for path in page_paths -%}
