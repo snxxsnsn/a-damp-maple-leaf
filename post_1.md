@@ -1,6 +1,6 @@
 ---
 title: / 일기
-layout: postlist
+layout: postlist1
 permalink: /post
 ---
 
