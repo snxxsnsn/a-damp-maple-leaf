@@ -1,4 +1,7 @@
 .profile-box {
+    position: fixed; /* 고정 위치로 설정 */
+    top: 50px; /* 원하는 위치로 조정 (예: 상단에서 50px 아래로 고정) */
+    left: 10px; /* 원하는 위치로 조정 (예: 왼쪽에서 10px에 고정) */
     border: 1px dashed #fff; /* 대쉬 모양의 테두리 적용 */
     padding: 20px; /* 내용과 테두리 사이 간격 */
     width: 180px; /* 프로필 박스 너비 */
