@@ -32,7 +32,7 @@ permalink: /
 
 <div class="profile-box">
       <img src="contents/elmo.png" alt="elmo">
-      <div class="divider"></div> <!-- 구분선 -->
+      <div class="divider" style="margin-top: 5px;"></div> <!-- 구분선 -->
       <h1>XENA</h1>
       <p>으에으에으웨짐바브웨</p>
 </div>
