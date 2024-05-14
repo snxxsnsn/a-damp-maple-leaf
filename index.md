@@ -33,7 +33,8 @@ permalink: /
 <div class="profile-box">
       <img src="contents/juice.jpg" alt="juice">
       <div class="divider" style="margin-top: 5px;"></div> <!-- 구분선 -->
-      <h1>XENA　　　<sup>2002.08.30</sup></h1>
+      <h1>XENA</h1>
+      <sup>2002.08.30</sup>
       <p>미옹미옹</p>
 </div>
 
