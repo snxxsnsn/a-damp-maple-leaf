@@ -4,7 +4,9 @@
 
 header_pages:
   - index.md
-  - post.md
+  - post_1.md
+  - post_2.md
+  - post_3.md
 
 #footer: 'follow us on <a href="https://twitter.com/">twitter</a>'
 
