@@ -30,14 +30,3 @@
   --code-color-17: #800000;
   --code-color-18: #bbbbbb;
 }
-
-.item {
-  base-color: #DBDBDB;
-  border: dashed 1px rgba(100, 100, 100, 0.9);
-  selection-background: rgba(100, 100, 100, 0.99);
-  selection-text: #000;
-  background-color: #000;
-  text-color: var(--base-color);
-  placeholder-color: var(--base-color);
-  link-color: var(--base-color);
-}
