@@ -35,6 +35,7 @@ permalink: /
       <div class="divider" style="margin-top: 5px;"></div> <!-- 구분선 -->
       <h1>XENA</h1>
       <sup>2002.08.30</sup>
+      <p>-</p>
       <p>미옹미옹</p>
 </div>
 
