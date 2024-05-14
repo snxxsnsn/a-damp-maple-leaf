@@ -34,6 +34,6 @@ permalink: /
       <img src="contents/elmo.png" alt="elmo">
       <div class="divider" style="margin-top: 5px;"></div> <!-- 구분선 -->
       <h1>XENA</h1>
-      <p>으에으에으</p>
+      <p>으에으에와</p>
 </div>
 
