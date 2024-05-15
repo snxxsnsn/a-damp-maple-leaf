@@ -1,9 +1,0 @@
----
-layout: post
-title:  "Syntax highlighting"
-date:   2019-11-06 01:11:00 +0100
-categories:
----
-
-# Syntax highlighting
-아시바이런걸로지랄이야~~
