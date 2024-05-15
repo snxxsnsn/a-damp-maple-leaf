@@ -17,19 +17,72 @@ plugins:
   - jekyll-seo-tag
 
 
+# Example Site settings
+
+#google_analytics: UA-NNNNNNNN-N
+
+header_pages:
+  - index.md
+  - post1.md
+  - post2.md
+  - post3.md
+
+#footer: ''
+
+#style: light # dark (default) or light
+#listen_for_clients_preferred_style: true # true or false (default)
+
+plugins:
+  - jekyll-seo-tag
+
+
+# Example Site settings
+
+#google_analytics: UA-NNNNNNNN-N
+
+header_pages:
+  - index.md
+  - post1.md
+  - post2.md
+  - post3.md
+
+#footer: ''
+
+#style: light # dark (default) or light
+#listen_for_clients_preferred_style: true # true or false (default)
+
+plugins:
+  - jekyll-seo-tag
+
+
+# Example Site settings
+
+#google_analytics: UA-NNNNNNNN-N
+
+header_pages:
+  - index.md
+  - post1.md
+  - post2.md
+  - post3.md
+
+#footer: ''
+
+#style: light # dark (default) or light
+#listen_for_clients_preferred_style: true # true or false (default)
+
+plugins:
+  - jekyll-seo-tag
+
+
 collections:
   post1:
     output: true
     permalink: /post1/:title/
-    
 
-collections:
   post2:
     output: true
     permalink: /post2/:title/
 
-
-collections:
   post3:
     output: true
     permalink: /post3/:title/
