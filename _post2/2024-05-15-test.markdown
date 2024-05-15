@@ -1,12 +1,13 @@
 ---
 layout: post
-title:  "test_think"
+title:  "테스트_생각"
 date:   2024-05-15 20:32:45 +0100
 categories:
 ---
 
-test think post
+테스트
 =============
 - - -
   <sup>date:   2024-05-15</sup>
 
+테스트 겸 메뉴 유지를 위한 글
