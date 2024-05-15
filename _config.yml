@@ -17,6 +17,6 @@ plugins:
   - jekyll-seo-tag
 
 collections:
-  습작:
+  post3:
     output: true
-    permalink: /습작/:title/
+    permalink: /post3/:title/
