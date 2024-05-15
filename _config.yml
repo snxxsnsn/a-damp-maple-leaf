@@ -17,6 +17,16 @@ plugins:
   - jekyll-seo-tag
 
 collections:
+  post1:
+    output: true
+    permalink: /post1/:title/
+
+collections:
+  post2:
+    output: true
+    permalink: /post2/:title/    
+
+collections:
   post3:
     output: true
     permalink: /post3/:title/
