@@ -6,7 +6,7 @@ categories:
 collection: 습작
 ---
 
-홍채
+홍채(습작)
 =============
 - - -
   <sup>date:   2024-05-14</sup>
