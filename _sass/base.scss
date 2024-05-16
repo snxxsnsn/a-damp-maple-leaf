@@ -44,6 +44,9 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
   }
 {% endfor %}
 
+@mixin desktop { @media (min-width: 720px) { @content; } }
+@mixin widescreen { @media (min-width: 1280px) { @content; } }
+
 /**
  * Layout
  */
