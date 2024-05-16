@@ -18,8 +18,8 @@ $container-max-width:  600px !default;
   font-weight: 400;
   font-display: swap;
   src: local('Galmuri14 Regular'),
-       url('contents/Galmuri14.woff2') format('woff2'),
-       url('contents/Galmuri14.ttf') format('truetype');
+       url('/contents/Galmuri14.woff2') format('woff2'),
+       url('/contents/Galmuri14.ttf') format('truetype');
 }
 
 /**
