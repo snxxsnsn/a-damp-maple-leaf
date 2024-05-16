@@ -22,6 +22,28 @@ a { text-decoration: underline;  color: var(--link-color); }
 a:hover { color: var(--background-color); background-color: var(--base-color); }
 @media only screen and (max-device-width: 500px) { * { font-size: $mobile-font-size !important; font-family: "Galmuri14", Arial, sans-serif; } }
 
+{% for font in site.fonts %}
+  @mixin {{ font.name | replace: " ", "-" }}($size: 1) {
+    font: {
+      family: {{ font.family }}-web, sans-serif;
+      {% case font.family %}
+      {% when "Galmuri14" %} size: 15px * $size;
+      {% when "Galmuri11" %} size: 12px * $size;
+      {% when "Galmuri9" %} size: 10px * $size;
+      {% when "Galmuri7" %} size: 8px * $size;
+      {% when "GalmuriMono11" %} size: 12px * $size;
+      {% when "GalmuriMono9" %} size: 10px * $size;
+      {% when "GalmuriMono7" %} size: 8px * $size;
+      {% endcase %}
+      {% case font.style %}
+      {% when "Bold" %} weight: 700; stretch: normal;
+      {% when "Condensed" %} weight: 400; stretch: condensed;
+      {% else %} weight: 400; stretch: normal;
+      {% endcase %}
+    }
+  }
+{% endfor %}
+
 /**
  * Layout
  */
