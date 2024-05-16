@@ -22,21 +22,6 @@ $container-max-width:  600px !default;
        url('contents/Galmuri14.ttf') format('truetype');
 }
 
-{% assign font_family = font.family %}
-{% assign font_style = font.style %}
-
-@mixin {{ font.name | replace: " ", "-" }}($size: 1) {
-  font-family: {{ font_family }}-web, sans-serif;
-  {% case font_family %}
-  {% when "Galmuri14" %} font-size: 15px * $size;
-  {% endcase %}
-  {% case font_style %}
-  {% when "Bold" %} font-weight: 700; font-stretch: normal;
-  {% when "Condensed" %} font-weight: 400; font-stretch: condensed;
-  {% else %} font-weight: 400; font-stretch: normal;
-  {% endcase %}
-}
-
 /**
  * Global
  */
