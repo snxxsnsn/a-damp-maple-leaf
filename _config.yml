@@ -86,3 +86,14 @@ collections:
   post3:
     output: true
     permalink: /post3/:title/
+
+
+fonts:
+  - name: Galmuri14
+    family: Galmuri14
+    style: Regular
+    size: 15
+
+
+sass:
+  style: compressed
