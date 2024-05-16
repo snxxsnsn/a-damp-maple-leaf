@@ -5,12 +5,22 @@
 /**
  * Style variables
  */
-$base-font-family:     "Galmuri14", 'Source Code Pro', monospace !default;
+$base-font-family:     'Galmuri14', 'Source Code Pro', monospace !default;
 $base-font-size:       12.5px !default;
 $mobile-font-size:     12.5px !default;
 $base-line-height:     1.5 !default;
 $container-width:      90% !default;
 $container-max-width:  600px !default;
+
+@font-face {
+  font-family: Galmuri14;
+  font-style: normal;
+  font-stretch: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: local('Galmuri14 Regular'),
+       url('contents/Galmuri14.woff2') format('woff2'),
+       url('contests/Galmuri14.ttf') format('truetype');
 
 /**
  * Global
@@ -20,7 +30,7 @@ h1, h2, h3, h4, h5, h6 { font-size: $base-font-size;  margin: 0px;  margin-top: 
 p, ul, ol { margin: 0px;  color: var(--text-color); }
 a { text-decoration: underline;  color: var(--link-color); }
 a:hover { color: var(--background-color); background-color: var(--base-color); }
-@media only screen and (max-device-width: 500px) { * { font-size: $mobile-font-size !important; font-family: "Galmuri14", Arial, sans-serif; } }
+@media only screen and (max-device-width: 500px) { * { font-size: $mobile-font-size !important; font-family: 'Galmuri14', Arial, sans-serif; } }
 
 /**
  * Layout
