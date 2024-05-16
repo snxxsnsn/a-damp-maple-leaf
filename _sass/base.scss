@@ -51,9 +51,9 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 /* 모바일 화면에 대한 스타일 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 300px) {
     .profile-box {
-        width: 90%; /* 모바일에서는 너비를 90%로 설정 */
+        width: 30%; /* 모바일에서는 너비를 30%로 설정 */
         padding: 15px; /* 패딩을 줄여서 공간을 확보 */
     }
     
