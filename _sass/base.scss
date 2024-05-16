@@ -27,10 +27,11 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 .profile-box {
     border: 1.5px dashed; /* 대쉬 모양의 테두리 적용 */
     padding: 25px; /* 내용과 테두리 사이 간격 */
-    width: 30%; /* 프로필 박스 너비 */
-    height: 50%; /* 프로필 박스 높이 */
+    width: 100%; /* 프로필 박스 너비를 100%로 설정 */
+    max-width: 400px; /* 최대 너비를 설정하여 너무 넓어지지 않도록 */
+    height: auto; /* 높이를 자동으로 설정하여 내용에 맞게 조절 */
     text-align: left; /* 텍스트 왼쪽 정렬 */
-    margin-bottom: 10px;
+    margin: 10px auto; /* 상하 좌우 중앙 정렬 */
 }
 
 .profile-box img {
@@ -48,6 +49,20 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     border-top: 1px dashed white; /* 대쉬 스타일의 테두리를 추가하고 색상을 하얀색으로 설정합니다. */
     margin-bottom: -20px;
 }
+
+/* 모바일 화면에 대한 스타일 */
+@media screen and (max-width: 768px) {
+    .profile-box {
+        width: 90%; /* 모바일에서는 너비를 90%로 설정 */
+        padding: 15px; /* 패딩을 줄여서 공간을 확보 */
+    }
+    
+    .profile-box img {
+        max-width: 100px; /* 이미지 크기도 줄여서 모바일에 맞게 조정 */
+        margin-bottom: 15px; /* 이미지와 텍스트 간격 조정 */
+    }
+}
+
 
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
 p { word-wrap: break-word;  word-break: break-word;  white-space: pre-wrap; margin-bottom: 15px; }
