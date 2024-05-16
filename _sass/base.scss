@@ -12,25 +12,6 @@ $base-line-height:     1.5 !default;
 $container-width:      90% !default;
 $container-max-width:  600px !default;
 
-{% for font in site.fonts %}
-  @mixin {{ font.name | replace: " ", "-" }}($size: 1) {
-    font: {
-      family: {{ font.family }}-web, sans-serif;
-      {% case font.family %}
-      {% when "Galmuri14" %} size: 15px * $size;
-      {% endcase %}
-      {% case font.style %}
-      {% when "Bold" %} weight: 700; stretch: normal;
-      {% when "Condensed" %} weight: 400; stretch: condensed;
-      {% else %} weight: 400; stretch: normal;
-      {% endcase %}
-    }
-  }
-{% endfor %}
-
-@mixin desktop { @media (min-width: 720px) { @content; } }
-@mixin widescreen { @media (min-width: 1280px) { @content; } }
-
 /**
  * Global
  */
