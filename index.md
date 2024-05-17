@@ -37,9 +37,3 @@ permalink: /
       <p>-</p>
       <p>(｡-_-｡)</p>
 </div>
-
-<div class="calendar-container">
-      <div id="calendar"></div>
-</div>
-
-<script src="script.js"></script>
