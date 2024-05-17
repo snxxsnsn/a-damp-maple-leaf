@@ -69,6 +69,10 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
         max-width: 100px; /* 이미지 크기도 줄여서 모바일에 맞게 조정 */
         margin-bottom: 15px; /* 이미지와 텍스트 간격 조정 */
     }
+
+     .recent-posts h2 {
+        font-size: 20px; /* 폰트 크기를 20px로 설정 */
+    }
 }
 
 .recent-posts {
