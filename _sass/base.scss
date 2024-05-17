@@ -35,7 +35,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 .profile-box img {
-    max-width: 120px; /* 프로필 이미지 너비 */
+    max-width: 80%; /* 프로필 이미지 너비 */
     height: auto; /* 프로필 이미지 높이 */
     display: block;
     margin: 0 auto; /* 가로 방향 가운데 정렬 */
@@ -51,9 +51,9 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 /* 모바일 화면에 대한 스타일 */
-@media screen and (max-width: 100px) {
+@media screen and (max-width: 250px) {
     .profile-box {
-        width: 30%; /* 모바일에서는 너비를 30%로 설정 */
+        width: 50%; /* 모바일에서는 너비를 30%로 설정 */
         padding: 15px; /* 패딩을 줄여서 공간을 확보 */
         margin-bottom: 10px; /* 하단 마진 */
         margin-left: 5%; /* 왼쪽 정렬을 유지 */
