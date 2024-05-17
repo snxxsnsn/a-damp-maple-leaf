@@ -59,7 +59,8 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
         width: 43vw; /* 뷰포트 너비를 43vw로 설정 */
         height: 90%; /* 모바일에서는 높이를 90%로 설정 */
         padding: 15px; /* 패딩을 줄여서 공간을 확보 */
-        margin-bottom: 8px; /* 하단 마진 */
+        margin-top: 2px; /* 상단 마진 */
+        margin-bottom: 7px; /* 하단 마진 */
         margin-left: 0%; /* 왼쪽 마진 */
     }
     
