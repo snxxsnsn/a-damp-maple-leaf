@@ -6,7 +6,7 @@ layout: default
 {% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %} <!-- add line break if there is any content -->
 
 <section class="recent-posts">
-  <h2>ǃ New Post　✂ - - - - - - -</h2>
+  <h2>✂ New Post　- - - - - - -</h2>
   <ul>
     {% assign all_posts = site.post1 | concat: site.post2 | concat: site.post3 %}
     {% assign sorted_posts = all_posts | sort: 'date' | reverse %}
