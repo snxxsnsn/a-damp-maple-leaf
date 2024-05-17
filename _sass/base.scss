@@ -28,7 +28,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     position: relative; /* 부모 요소를 기준으로 자식 요소를 배치하기 위해 position: relative;로 설정합니다. */
     border: 1.5px dashed; /* 대쉬 모양의 테두리 적용 */
     padding: 25px; /* 내용과 테두리 사이 간격 */
-    width: 30%; /* 프로필 박스 너비 */
+    width: 40%; /* 프로필 박스 너비 */
     height: auto; /* 높이를 자동으로 설정하여 내용에 맞게 조절 */
     text-align: left; /* 텍스트 왼쪽 정렬 */
     margin-bottom: 10px; /* 하단 마진 */
@@ -52,7 +52,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 /* 모바일 화면에 대한 스타일 */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 350px) {
     .profile-box {
         overflow: visible; /* 넘치는 내용을 숨기지 않음 */
         width: 90%; /* 모바일에서는 너비를 30%로 설정 */
