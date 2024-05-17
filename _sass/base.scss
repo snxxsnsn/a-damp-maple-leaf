@@ -71,7 +71,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     }
 
      .recent-posts h2 {
-        font-size: 1.5em; /* 폰트 크기 설정 */
+        font-size: 1.5em; !important; /* 폰트 크기 설정 */
     }
 }
 
