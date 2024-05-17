@@ -54,11 +54,11 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 /* 모바일 화면에 대한 스타일 */
 @media screen and (max-width: 100%) {
     .profile-box {
-        border-width: 1px; /* 모바일 화면에서는 테두리 두께를 1px로 설정 */
+        border-width: 0.5px; /* 모바일 화면에서는 테두리 두께를 1px로 설정 */
         overflow: visible; /* 넘치는 내용을 숨기지 않음 */
-        width: 40vw; /* 뷰포트 너비를 40vw로 설정 */
+        width: 50vw; /* 뷰포트 너비를 40vw로 설정 */
         height: 90%; /* 모바일에서는 높이를 90%로 설정 */
-        padding: -5px; /* 패딩을 줄여서 공간을 확보 */
+        padding: -20px; /* 패딩을 줄여서 공간을 확보 */
         margin-bottom: 5px; /* 하단 마진 */
         margin-left: 5%; /* 왼쪽 마진 */
     }
