@@ -52,7 +52,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 /* 모바일 화면에 대한 스타일 */
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 400px) {
     .profile-box {
         border-width: 1px; /* 모바일 화면에서는 테두리 두께를 1px로 설정 */
         overflow: visible; /* 넘치는 내용을 숨기지 않음 */
