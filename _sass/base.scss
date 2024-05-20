@@ -70,6 +70,17 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
         margin-bottom: 15px; /* 이미지와 텍스트 간격 조정 */
     }
 
+    /* 프로필 컨테이너를 수평으로 배치하여 프로필 박스와 달력을 나란히 배치합니다 */
+    .profile-container {
+        display: flex;
+        align-items: flex-start;
+    }
+
+    /* 프로필 박스와 달력 사이에 공간을 둡니다 */
+    .profile-box {
+        margin-right: 20px;
+    }
+
      .recent-posts h2 {
         font-size: 20px !important;
         color: #fff;
@@ -101,6 +112,49 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 .recent-posts a:hover {
   text-decoration: underline;
+}
+
+/* 달력 스타일을 정의합니다 */
+.calendar {
+  width: 300px; /* 달력의 너비를 300px로 설정 */
+  border: 1px dashed white; /* 달력의 경계를 흰색 점선으로 설정 */
+  padding: 10px; /* 달력 내부 여백을 10px로 설정 */
+  color: white; /* 텍스트 색상을 흰색으로 설정 */
+  background-color: transparent; /* 배경을 투명으로 설정 */
+}
+
+/* 달력 테이블 스타일을 정의합니다 */
+.calendar table {
+  width: 100%; /* 테이블 너비를 100%로 설정 */
+  border-collapse: collapse; /* 테이블 경계를 병합하여 경계선을 제거 */
+}
+
+/* 달력의 테이블 헤더와 셀 스타일을 정의합니다 */
+.calendar th, .calendar td {
+  padding: 5px; /* 셀 내부 여백을 5px로 설정 */
+  text-align: center; /* 텍스트를 가운데 정렬 */
+}
+
+/* 달력의 테이블 헤더 배경 색상을 검정으로 설정 */
+.calendar th {
+  background-color: black;
+}
+
+/* 달력의 테이블 셀 배경 색상을 검정으로 설정 */
+.calendar td {
+  background-color: black;
+  color: white; /* 텍스트 색상을 흰색으로 설정 */
+}
+
+/* 일요일 셀의 텍스트 색상을 빨간색으로 설정 */
+.calendar td.sunday {
+  color: red;
+}
+
+/* 오늘 날짜 셀의 배경을 반투명 회색 원으로 설정 */
+.calendar td.today {
+  background-color: rgba(128, 128, 128, 0.5);
+  border-radius: 50%; /* 셀을 원형으로 만듦 */
 }
 
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
