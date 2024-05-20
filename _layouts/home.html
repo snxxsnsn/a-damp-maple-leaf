@@ -19,4 +19,10 @@ layout: default
   </ul>
 </section>
 
-<script src="/path/to/scripts.js"></script>
+ <script src="/path/to/scripts.js"></script> <!-- 스크립트 파일을 불러옵니다. -->
+    <script>
+        // 페이지 로드 후 createCalendar 함수 호출
+        document.addEventListener("DOMContentLoaded", function () {
+            createCalendar("calendar", new Date().getFullYear(), new Date().getMonth() + 1);
+        });
+    </script>
