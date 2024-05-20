@@ -24,9 +24,12 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 /**
  * Layout
  */
-.profile-box {
+.profile-box-container {
     display: flex;
     align-items: flex-start;
+}
+
+.profile-box {
     position: relative; /* 부모 요소를 기준으로 자식 요소를 배치하기 위해 position: relative;로 설정합니다. */
     border: 1.5px dashed; /* 대쉬 모양의 테두리 적용 */
     padding: 25px; /* 내용과 테두리 사이 간격 */
