@@ -91,16 +91,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
         font-size: 20px !important;
         color: #fff;
     }
-
-    .calendar {
-      width: 50%; /* 달력의 너비를 50%로 설정 */
-      height: 200px; /* 달력의 높이를 30%로 설정 */
-      padding: 10px; /* 달력 내부 여백을 10px로 설정 */
-    }
-
-    .calendar td.sunday {
-      color: red;
-    }
 }
 
 .recent-posts {
@@ -132,8 +122,8 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 /* 달력 스타일을 정의합니다 */
 .calendar {
-  width: 50%; /* 달력의 너비를 50%로 설정 */
-  height: auto; /* 달력의 높이를 30%로 설정 */
+  width: 100%;
+  height: 55%;
   border: 1px dashed white; /* 달력의 경계를 흰색 점선으로 설정 */
   padding: 10px; /* 달력 내부 여백을 10px로 설정 */
   color: white; /* 텍스트 색상을 흰색으로 설정 */
@@ -141,10 +131,18 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
   margin-top: 9px
 }
 
-/* 달력 테이블 스타일을 정의합니다 */
+/* 필요에 따라 높이를 50%에서 60%로 조절 */
+@media (min-width: 700px) {
+    .calendar {
+        height: 60%;
+    }
+}
+
+/* 달력 테이블 스타일 */
 .calendar table {
-  width: 100%; /* 테이블 너비를 100%로 설정 */
-  border-collapse: collapse; /* 테이블 경계를 병합하여 경계선을 제거 */
+    width: 100%;
+    height: 100%; /* 테이블 높이를 달력의 높이에 맞춤 */
+    border-collapse: collapse;
 }
 
 /* 달력의 테이블 헤더와 셀 스타일을 정의합니다 */
