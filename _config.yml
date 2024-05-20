@@ -1,4 +1,5 @@
 # Example Site settings
+timezone: Asia/Seoul
 
 #google_analytics: UA-NNNNNNNN-N
 
