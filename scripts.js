@@ -8,7 +8,6 @@ function createCalendar(id, year, month) {
 
     let table = '<table>';
     table += '<caption>' + monthAbbreviations[mon] + ' ' + year + '</caption>'; // 월 이름과 연도 추가
-    table += '<tr><th colspan="7">' + year + '</th></tr>'; // 올해 년도 추가
     table += '<tr><th>' + dayAbbreviations.join('</th><th>') + '</th></tr><tr>';
 
     // 공백 채우기
