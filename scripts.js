@@ -1,12 +1,9 @@
 function createCalendar(id, year, month) {
     let elem = document.getElementById(id);
-    let d = new Date(year, month - 1); // 월은 0부터 시작하므로 1을 빼줍니다.
+    let mon = month - 1; // 월은 0부터 시작하므로
+    let d = new Date(year, mon);
 
     let table = '<table><tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr><tr>';
-
-    // 공백 채우기
-    for (let i = 0; i < getDay(d); i++) {
-        table += '<td></td>';
     }
 
     // 오늘 날짜 표시
