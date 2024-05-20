@@ -161,7 +161,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 /* 오늘 날짜 셀의 배경을 반투명 회색 원으로 설정 */
 .calendar td.today {
-  background-color: rgba(128, 128, 128, 0.3);
+  background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%; /* 셀을 원형으로 만듦 */
 }
 
