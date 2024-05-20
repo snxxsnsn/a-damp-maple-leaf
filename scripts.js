@@ -1,14 +1,8 @@
 function createCalendar(id, year, month) {
     let elem = document.getElementById(id);
-    let mon = month - 1; // 월은 0부터 시작하므로
-    let d = new Date(year, mon);
-    let monthAbbreviations = ["Jan", "Feb", "Mar", "Apr", "May", "Jun",
-                              "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    let dayAbbreviations = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+    let d = new Date(year, month - 1); // 월은 0부터 시작하므로 1을 빼줍니다.
 
-    let table = '<table>';
-    table += '<caption>' + monthAbbreviations[mon] + ' ' + '</caption>'; // 월 이름과 연도 추가
-    table += '<tr><th>' + dayAbbreviations.join('</th><th>') + '</th></tr><tr>';
+    let table = '<table><tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr><tr>';
 
     // 공백 채우기
     for (let i = 0; i < getDay(d); i++) {
@@ -52,4 +46,10 @@ function getDay(date) { // 일요일부터 0으로 시작
     return day - 1;
 }
 
-createCalendar("calendar", 2024, 5); // 예시로 2024년 5월 달력 생성
+// 현재 날짜를 가져옵니다.
+let currentDate = new Date();
+let currentYear = currentDate.getFullYear();
+let currentMonth = currentDate.getMonth() + 1; // 월은 0부터 시작하므로 1을 더해줍니다.
+
+// 달력을 생성합니다.
+createCalendar("calendar", currentYear, currentMonth);
