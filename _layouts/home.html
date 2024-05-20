@@ -5,6 +5,18 @@ layout: default
 {{ content }}
 {% assign contentwonl = content | strip_newlines %} {% unless contentwonl == ""  %} <br /> {% endunless %} <!-- add line break if there is any content -->
 
+<div class="profile-container">
+  <div class="profile-box">
+    <img src="contents/juice.jpg" alt="juice">
+    <div class="divider"></div> <!-- 구분선 -->
+    <h1>XENA</h1>
+    <sup>2002.08.30</sup>
+    <p>-</p>
+    <p>(｡-_-｡)</p>
+  </div>
+  <div class="calendar" id="calendar"></div>
+</div>
+
 <section class="recent-posts">
   <h2>✂ New Post　- - - - - - -</h2>
   <ul>
