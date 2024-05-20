@@ -97,6 +97,10 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
       height: 30%; /* 달력의 높이를 30%로 설정 */
       padding: 10px; /* 달력 내부 여백을 10px로 설정 */
     }
+
+    .calendar td.sunday {
+      color: red;
+    }
 }
 
 .recent-posts {
