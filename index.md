@@ -36,5 +36,6 @@ permalink: /
       <sup>2002.08.30</sup>
       <p>-</p>
       <p>(｡-_-｡)</p>
-<div class="calendar" id="calendar"></div>
 </div>
+
+<div class="calendar" id="calendar"></div>
