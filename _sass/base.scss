@@ -128,7 +128,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
   padding: 10px; /* 달력 내부 여백을 10px로 설정 */
   color: white; /* 텍스트 색상을 흰색으로 설정 */
   background-color: transparent; /* 배경을 투명으로 설정 */
-  margin-top: 9px
+  margin-top: 9px;
 
 /* 필요에 따라 높이를 50%에서 60%로 조절 */
 @media (min-width: 300px) {
@@ -170,7 +170,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 .calendar td.today {
   background-color: rgba(255, 255, 255, 0.3);
   border-radius: 50%; /* 셀을 원형으로 만듦 */
-}
 }
 
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
