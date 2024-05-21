@@ -129,7 +129,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
   color: white; /* 텍스트 색상을 흰색으로 설정 */
   background-color: transparent; /* 배경을 투명으로 설정 */
   margin-top: 9px
-  box-sizing: border-box; /* 패딩과 경계 포함한 박스 크기 계산 */
 
 /* 필요에 따라 높이를 50%에서 60%로 조절 */
 @media (min-width: 300px) {
