@@ -68,7 +68,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
         padding: 15px; /* 패딩을 줄여서 공간을 확보 */
         margin-top: 8px; /* 상단 마진 */
         margin-bottom: 7px; /* 하단 마진 */
-        margin-right: 15%;
+        margin-right: auto;
     }
     
     .profile-box img {
@@ -122,20 +122,22 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 /* 달력 스타일을 정의합니다 */
 .calendar {
-  width: 55%;
+  width: 60%;
   max-height: 50%;
   border: 1px dashed white; /* 달력의 경계를 흰색 점선으로 설정 */
   padding: 10px; /* 달력 내부 여백을 10px로 설정 */
   color: white; /* 텍스트 색상을 흰색으로 설정 */
   background-color: transparent; /* 배경을 투명으로 설정 */
   margin-top: 9px;
+margin-right: auto;
 }
 
 /* 필요에 따라 높이를 50%에서 60%로 조절 */
 @media (min-width: 300px) {
     .calendar {
-        height: 50%;
-        padding: 20px;
+        height: 30%;
+        padding: 10px;
+        margin-right: auto;
     }
 }
 
