@@ -139,8 +139,8 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 /* 달력 테이블 스타일 */
 .calendar table {
-    width: 100%;
-    height: 100%; /* 테이블 높이를 달력의 높이에 맞춤 */
+    width: 90%;
+    height: 90%; /* 테이블 높이를 달력의 높이에 맞춤 */
     border-collapse: collapse;
 }
 
@@ -148,7 +148,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 .calendar th, .calendar td {
   padding: 5px; /* 셀 내부 여백을 5px로 설정 */
   text-align: center; /* 텍스트를 가운데 정렬 */
-  font-size: 0.8em; /* 폰트 크기를 0.8em으로 설정 */
 }
 
 /* 달력의 테이블 헤더 배경 색상을 검정으로 설정 */
