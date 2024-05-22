@@ -26,10 +26,21 @@ layout: default
         });
     </script>
 
-      <audio class="bgm-player" autoplay loop>
-        <source src="music/Undertale OST 090 His Theme.mp3" type="audio/mpeg">
-        Your browser does not support the audio element.
-    </audio>
-  
-  <script src="audio-script.js"></script>
+      <audio id="audioPlayer" controls style="width: 100%;">
+  <source src="your-audio-file.mp3" type="audio/mpeg">
+  Your browser does not support the audio element.
+</audio>
+
+<script>
+  const audioPlayer = document.getElementById('audioPlayer');
+
+  // 재생 또는 일시 정지 토글
+  function togglePlay() {
+    if (audioPlayer.paused) {
+      audioPlayer.play();
+    } else {
+      audioPlayer.pause();
+    }
+  }
+</script>
 </section>
