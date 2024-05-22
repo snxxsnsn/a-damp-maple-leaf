@@ -42,9 +42,9 @@ permalink: /
    <div class="bgm-player-container">
     <div class="song-filename" id="song-filename"></div>
         <div class="bgm-timeline">
-            <span class="current-time">0:00</span>
+            <span class="current-time" id="current-time"></span>
             <span class="timeline-bar">━━━━━━━━━</span>
-            <span class="end-time" id="end-time"></span>
+            <span class="end-time" id="end-time"</span>
         </div>
         <div class="bgm-controls">
                 <button id="btn-shuffle">⇆</button>
