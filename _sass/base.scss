@@ -201,11 +201,17 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     margin: 0 10px;
 }
 
+.bgm-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
 .bgm-controls button {
     background: none;
     border: none;
     font-size: 1.5em;
     cursor: pointer;
+    color: white; /* 버튼 텍스트 색상을 하얀색으로 설정 */
 }
 
 .bgm-controls button:focus {
