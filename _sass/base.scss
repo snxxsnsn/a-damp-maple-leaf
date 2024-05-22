@@ -185,56 +185,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
   border-radius: 50%; /* 셀을 원형으로 만듦 */
 }
 
-.bgm-player-container {
-    margin-top: 20px;
-    text-align: center;
-}
-
-.bgm-timeline {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 10px;
-}
-
-.timeline-bar {
-    margin: 0 10px;
-}
-
-.bgm-controls {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.bgm-controls button {
-    background: none;
-    border: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    color: white; /* 버튼 텍스트 색상을 하얀색으로 설정 */
-}
-
-.bgm-controls button:focus {
-    outline: none;
-}
-
-.song-filename {
-    position: absolute;
-    top: 10px; /* 위에서 10px 위치에 표시 */
-    left: 50%; /* 가운데 정렬 */
-    transform: translateX(-50%); /* 가운데 정렬 */
-    white-space: nowrap; /* 텍스트가 한 줄로만 표시되도록 설정 */
-    overflow: hidden; /* 너무 긴 텍스트는 숨김 처리 */
-    color: white;
-    animation: marquee 10s linear infinite; /* 애니메이션 적용 */
-}
-
-@keyframes marquee {
-    0% { transform: translateX(-100%); } /* 왼쪽에서 오른쪽으로 흐름 시작 */
-    100% { transform: translateX(100%); } /* 오른쪽에서 왼쪽으로 흐름 종료 */
-}
-
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
 p { word-wrap: break-word;  word-break: break-word;  white-space: pre-wrap; margin-bottom: 15px; }
 footer { color: var(--text-color);  border-top: var(--border);  margin: 20px auto 15px;  padding-top: 10px;  text-align: right; }
