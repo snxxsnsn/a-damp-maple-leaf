@@ -24,7 +24,7 @@ document.addEventListener("DOMContentLoaded", function() {
             playPauseButton.textContent = "❚❚";
         } else {
             audioPlayer.pause();
-            playPauseButton.textContent = "►";
+            playPauseButton.textContent = "▶";
         }
     });
 
