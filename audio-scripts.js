@@ -17,6 +17,11 @@ document.addEventListener("DOMContentLoaded", function() {
         updateTimeline(currentTime, audioPlayer.duration);
     };
 
+     // 오디오 파일 이름 설정
+    var audioSource = audioPlayer.querySelector("source");
+    var songFilename = audioSource.getAttribute("src").split("/").pop(); // 파일 경로에서 파일 이름 추출
+    songFilenameElement.textContent = songFilename;
+
     // 재생/일시 정지 버튼 클릭 이벤트 처리
     playPauseButton.addEventListener("click", function() {
         if (audioPlayer.paused) {
