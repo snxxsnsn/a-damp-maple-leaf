@@ -2,31 +2,40 @@ document.addEventListener("DOMContentLoaded", function() {
     var audioPlayer = document.querySelector(".bgm-player");
     var songFilenameElement = document.querySelector("#song-filename");
     var startTimeElement = document.querySelector(".start-time");
+    var currentTimeElement = document.getElementById("current-time");
     var endTimeElement = document.getElementById("end-time");
     var timelineBar = document.querySelector(".timeline-bar");
-    var totalTimeDisplay = document.querySelector(".total-time"); // 총 재생 시간을 표시할 요소 추가
+    var totalTimeDisplay = document.querySelector(".total-time");
 
     // 오디오 파일 이름 설정
     var audioSource = audioPlayer.querySelector("source");
     var songFilename = audioSource.getAttribute("src").split("/").pop(); // 파일 경로에서 파일 이름 추출
     songFilenameElement.textContent = songFilename;
 
-    // 오디오 파일의 시작 시간 설정
-    startTimeElement.textContent = "0:00";
+    // 현재 시간 업데이트 함수
+    function updateCurrentTime(currentTime) {
+        currentTimeElement.textContent = formatTime(currentTime);
+    }
 
-    // 오디오 메타데이터 로드 시 총 재생 시간 표시
+    // 시간 형식 변환 함수
+    function formatTime(seconds) {
+        var minutes = Math.floor(seconds / 60);
+        var remainingSeconds = Math.floor(seconds % 60);
+        return minutes + ":" + (remainingSeconds < 10 ? "0" : "") + remainingSeconds;
+    }
+
+    // 끝 시간 설정
     audioPlayer.addEventListener("loadedmetadata", function() {
         endTimeElement.textContent = formatTime(audioPlayer.duration);
         totalTimeDisplay.textContent = formatTime(audioPlayer.duration);
     });
-});
 
     // 오디오 재생 시간 업데이트 시 현재 시간과 타임라인 바 업데이트
-    audioPlayer.ontimeupdate = function() {
+    audioPlayer.addEventListener("timeupdate", function() {
         var currentTime = audioPlayer.currentTime;
-        currentTimeDisplay.textContent = formatTime(currentTime);
+        updateCurrentTime(currentTime);
         updateTimeline(currentTime, audioPlayer.duration);
-    };
+    });
 
     // 재생/일시 정지 버튼 클릭 이벤트 처리
     playPauseButton.addEventListener("click", function() {
@@ -39,16 +48,6 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     });
 
-    // 시간 포맷팅 함수 (mm:ss)
-    function formatTime(seconds) {
-        var minutes = Math.floor(seconds / 60);
-        var seconds = Math.floor(seconds % 60);
-        if (seconds < 10) {
-            seconds = "0" + seconds;
-        }
-        return minutes + ":" + seconds;
-    }
-
     // 타임라인 바 업데이트 함수
     function updateTimeline(currentTime, duration) {
         var progress = (currentTime / duration) * 10;
@@ -56,4 +55,3 @@ document.addEventListener("DOMContentLoaded", function() {
         timelineBar.textContent = bar;
     }
 });
-
