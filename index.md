@@ -38,4 +38,18 @@ permalink: /
             <p>아 (｡-_-｡)</p>
       </div>
       <div class="calendar" id="calendar"></div>
+          <!-- BGM 플레이어 -->
+    <div class="bgm-player-container">
+        <div class="bgm-timeline">
+            <span class="current-time">0:00</span>
+            <span class="timeline-bar">━━❚━━━━━━</span>
+            <span class="total-time">3:09</span>
+        </div>
+        <div class="bgm-controls">
+            <button class="btn-rewind">⇆</button>
+            <button class="btn-play-pause">❚❚</button>
+            <button class="btn-forward">▹</button>
+            <button class="btn-replay">↻</button>
+        </div>
+    </div>
 </div>
