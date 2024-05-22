@@ -39,17 +39,19 @@ permalink: /
       </div>
       <div class="calendar" id="calendar"></div>
           <!-- BGM 플레이어 -->
-    <div class="bgm-player-container">
+   <div class="bgm-player-container">
+    <div class="song-filename" id="song-filename"></div>
         <div class="bgm-timeline">
             <span class="current-time">0:00</span>
-            <span class="timeline-bar">━━❚━━━━━━</span>
-            <span class="total-time">3:09</span>
+            <span class="timeline-bar">━━━━━━━━━</span>
+            <span class="end-time" id="end-time"></span>
         </div>
         <div class="bgm-controls">
-            <button class="btn-rewind">⇆</button>
-            <button class="btn-play-pause">❚❚</button>
-            <button class="btn-forward">▹</button>
-            <button class="btn-replay">↻</button>
+                <button id="btn-shuffle">⇆</button>
+                <button id="btn-previous">◃</button>
+                <button id="btn-play-pause">▶</button>
+                <button id="btn-next">▹</button>
+                <button id="btn-replay">↻</button>
         </div>
     </div>
 </div>
