@@ -26,28 +26,4 @@ layout: default
         });
     </script>
 
-      <audio id="audioPlayer" controls style="width: 100%;">
-  <source src="Undertale OST 090 His Theme.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
-<div id="playerControls">
-  <button id="playButton">재생</button>
-  <button id="pauseButton">일시 정지</button>
-</div>
-
-<script>
-  const audioPlayer = document.getElementById('audioPlayer');
-  const playPauseButton = document.getElementById('playPauseButton');
-  
-  function togglePlay() {
-    if (audioPlayer.paused) {
-      audioPlayer.play();
-    } else {
-      audioPlayer.pause();
-    }
-  }
-
-  playPauseButton.addEventListener('click', togglePlay);
-</script>
 </section>
