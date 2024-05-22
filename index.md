@@ -35,7 +35,7 @@ permalink: /
             <h1>XENA</h1>
             <sup>2002.08.30</sup>
             <p>-</p>
-            <p>아 (｡-_-｡)</p>
+            <p>에 (｡-_-｡)</p>
       </div>
       <div class="calendar" id="calendar"></div>
           <!-- BGM 플레이어 -->
