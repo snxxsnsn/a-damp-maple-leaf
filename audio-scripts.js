@@ -1,9 +1,9 @@
 document.addEventListener("DOMContentLoaded", function() {
-    var audioPlayer = document.getElementById("bgm-player");
-    var playPauseButton = document.getElementById("btn-play-pause");
-    var currentTimeDisplay = document.getElementById("current-time");
-    var totalTimeDisplay = document.getElementById("total-time");
-    var timelineBar = document.getElementById("timeline-bar");
+    var audioPlayer = document.querySelector(".bgm-player");
+    var playPauseButton = document.querySelector(".btn-play-pause");
+    var currentTimeDisplay = document.querySelector(".current-time");
+    var totalTimeDisplay = document.querySelector(".total-time");
+    var timelineBar = document.querySelector(".timeline-bar");
 
     // 오디오 메타데이터 로드 시 총 재생 시간 표시
     audioPlayer.onloadedmetadata = function() {
@@ -12,8 +12,9 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // 오디오 재생 시간 업데이트 시 현재 시간과 타임라인 바 업데이트
     audioPlayer.ontimeupdate = function() {
-        currentTimeDisplay.textContent = formatTime(audioPlayer.currentTime);
-        updateTimeline(audioPlayer.currentTime, audioPlayer.duration);
+        var currentTime = audioPlayer.currentTime;
+        currentTimeDisplay.textContent = formatTime(currentTime);
+        updateTimeline(currentTime, audioPlayer.duration);
     };
 
     // 재생/일시 정지 버튼 클릭 이벤트 처리
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", function() {
     // 타임라인 바 업데이트 함수
     function updateTimeline(currentTime, duration) {
         var progress = (currentTime / duration) * 10;
-        var bar = "━".repeat(progress) + "❚" + "━".repeat(10 - progress);
+        var bar = "━".repeat(Math.floor(progress)) + "❚" + "━".repeat(10 - Math.floor(progress));
         timelineBar.textContent = bar;
     }
 });
