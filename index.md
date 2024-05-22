@@ -44,7 +44,7 @@ permalink: /
         <div class="bgm-timeline">
             <span class="current-time" id="current-time"></span>
             <span class="timeline-bar">━━━━━━━━━</span>
-            <span class="end-time" id="end-time"</span>
+            <span class="end-time" id="end-time"></span>
         </div>
         <div class="bgm-controls">
                 <button id="btn-shuffle">⇆</button>
