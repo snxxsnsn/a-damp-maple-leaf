@@ -4,21 +4,22 @@ document.addEventListener("DOMContentLoaded", function() {
     var startTimeElement = document.querySelector(".start-time");
     var endTimeElement = document.getElementById("end-time");
     var timelineBar = document.querySelector(".timeline-bar");
+    var totalTimeDisplay = document.querySelector(".total-time"); // 총 재생 시간을 표시할 요소 추가
 
     // 오디오 파일 이름 설정
     var audioSource = audioPlayer.querySelector("source");
     var songFilename = audioSource.getAttribute("src").split("/").pop(); // 파일 경로에서 파일 이름 추출
     songFilenameElement.textContent = songFilename;
 
-    // 오디오 파일의 시작 시간과 끝 시간 설정
-    audioPlayer.addEventListener("loadedmetadata", function() {
-        startTimeElement.textContent = "0:00"; // 오디오 파일의 시작 시간 설정
-        endTimeElement.textContent = formatTime(audioPlayer.duration); // 오디오 파일의 끝 시간 설정
+    // 오디오 파일의 시작 시간 설정
+    startTimeElement.textContent = "0:00";
 
     // 오디오 메타데이터 로드 시 총 재생 시간 표시
-    audioPlayer.onloadedmetadata = function() {
+    audioPlayer.addEventListener("loadedmetadata", function() {
+        endTimeElement.textContent = formatTime(audioPlayer.duration);
         totalTimeDisplay.textContent = formatTime(audioPlayer.duration);
-    };
+    });
+});
 
     // 오디오 재생 시간 업데이트 시 현재 시간과 타임라인 바 업데이트
     audioPlayer.ontimeupdate = function() {
