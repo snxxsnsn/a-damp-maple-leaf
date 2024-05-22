@@ -1,9 +1,19 @@
 document.addEventListener("DOMContentLoaded", function() {
     var audioPlayer = document.querySelector(".bgm-player");
-    var playPauseButton = document.querySelector(".btn-play-pause");
-    var currentTimeDisplay = document.querySelector(".current-time");
-    var totalTimeDisplay = document.querySelector(".total-time");
+    var songFilenameElement = document.querySelector("#song-filename");
+    var startTimeElement = document.querySelector(".start-time");
+    var endTimeElement = document.getElementById("end-time");
     var timelineBar = document.querySelector(".timeline-bar");
+
+    // 오디오 파일 이름 설정
+    var audioSource = audioPlayer.querySelector("source");
+    var songFilename = audioSource.getAttribute("src").split("/").pop(); // 파일 경로에서 파일 이름 추출
+    songFilenameElement.textContent = songFilename;
+
+    // 오디오 파일의 시작 시간과 끝 시간 설정
+    audioPlayer.addEventListener("loadedmetadata", function() {
+        startTimeElement.textContent = "0:00"; // 오디오 파일의 시작 시간 설정
+        endTimeElement.textContent = formatTime(audioPlayer.duration); // 오디오 파일의 끝 시간 설정
 
     // 오디오 메타데이터 로드 시 총 재생 시간 표시
     audioPlayer.onloadedmetadata = function() {
@@ -16,11 +26,6 @@ document.addEventListener("DOMContentLoaded", function() {
         currentTimeDisplay.textContent = formatTime(currentTime);
         updateTimeline(currentTime, audioPlayer.duration);
     };
-
-     // 오디오 파일 이름 설정
-    var audioSource = audioPlayer.querySelector("source");
-    var songFilename = audioSource.getAttribute("src").split("/").pop(); // 파일 경로에서 파일 이름 추출
-    songFilenameElement.textContent = songFilename;
 
     // 재생/일시 정지 버튼 클릭 이벤트 처리
     playPauseButton.addEventListener("click", function() {
