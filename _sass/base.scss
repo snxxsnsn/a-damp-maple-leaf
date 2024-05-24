@@ -136,7 +136,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 /* 필요에 따라 높이를 50%에서 60%로 조절 */
-@media (min-width: 756px) {
+@media (min-width: 600px) {
     .calendar {
         width: 50%;
         height: 40%;
@@ -157,7 +157,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 /* 달력의 테이블 헤더와 셀 스타일을 정의합니다 */
 .calendar th, .calendar td {
-  padding: 5px; /* 셀 내부 여백을 5px로 설정 */
+  padding: 3px; /* 셀 내부 여백을 5px로 설정 */
   text-align: center; /* 텍스트를 가운데 정렬 */
 }
 
