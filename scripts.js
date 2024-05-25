@@ -3,10 +3,13 @@ function createCalendar(id, year, month) {
     let mon = month - 1; // 월은 0부터 시작하므로
     let d = new Date(year, mon, 1);
 
+    // 연도와 월 표시
+    let header = `<h4>${year} / ${month}</h4>`;
+
     let table = '<table><tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr><tr>';
 
     // 공백 채우기
-    for (let i = 0; i < getDay(d); i++) {
+    for (let i = 0; i < d.getDay(); i++) {
         table += '<td></td>';
     }
 
@@ -16,13 +19,13 @@ function createCalendar(id, year, month) {
     // 날짜 채우기
     while (d.getMonth() == mon) {
         let cls = '';
-        if (getDay(d) % 7 == 0) cls = 'sunday'; // 일요일
+        if (d.getDay() == 0) cls = 'sunday'; // 일요일
         if (d.getDate() == today.getDate() && d.getMonth() == today.getMonth() && d.getFullYear() == today.getFullYear()) {
             cls += ' today'; // 오늘 날짜
         }
         table += `<td class="${cls}">` + d.getDate() + '</td>';
 
-        if (getDay(d) % 7 == 6) { // 토요일
+        if (d.getDay() == 6) { // 토요일
             table += '</tr><tr>';
         }
 
@@ -30,21 +33,15 @@ function createCalendar(id, year, month) {
     }
 
     // 나머지 공백 채우기
-    if (getDay(d) != 0) {
-        for (let i = getDay(d); i < 7; i++) {
+    if (d.getDay() != 0) {
+        for (let i = d.getDay(); i < 7; i++) {
             table += '<td></td>';
         }
     }
 
     table += '</tr></table>';
 
-    elem.innerHTML = table;
-}
-
-function getDay(date) { // 일요일부터 0으로 시작
-    let day = date.getDay();
-    if (day == 0) day = 7;
-    return day - 1;
+    elem.innerHTML = header + table;
 }
 
 // 현재 날짜를 기반으로 달력을 생성합니다.
