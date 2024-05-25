@@ -4,7 +4,7 @@ function createCalendar(id, year, month) {
     let d = new Date(year, mon, 1);
 
   // 연도와 월을 표시하는 문자열
-    let header = `<header>${year} / ${month}</header>`;
+    let header = `<h3>${year} / ${month}</h3>`;
 
     let table = '<table><tr><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr><tr>';
 
