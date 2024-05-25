@@ -41,7 +41,8 @@ function createCalendar(id, year, month) {
 
     table += '</tr></table>';
 
-    elem.innerHTML = header + table;
+    elem.innerHTML = header + '\n' + table;
+
 }
 
 // 현재 날짜를 기반으로 달력을 생성합니다.
