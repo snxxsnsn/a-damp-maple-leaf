@@ -138,13 +138,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
   justify-content: space-between; /* 공간을 균등하게 분배 */
 }
 
-/* 연도와 월 스타일을 중앙에 배치하고 글자 크기를 조절 */
-.calendar-header {
-  font-size: 16px; /* 글자 크기 조절 */
-  text-align: center; /* 중앙 정렬 */
-  margin-bottom: 7px; /* 아래 여백 추가 */
-}
-
 /* 필요에 따라 높이를 50%에서 60%로 조절 */
 @media (min-width: 600px) {
     .calendar {
