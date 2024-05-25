@@ -1,4 +1,4 @@
----
+ ---
 title: home
 layout: home
 permalink: /
@@ -37,8 +37,5 @@ permalink: /
             <p>-</p>
             <p>왜 안 될까 (｡-_-｡)</p>
       </div>
-      <div class="calendar-box">
-            <div class="calendar-header"><div>
       <div class="calendar" id="calendar"></div>
-            </div>
 </div>
