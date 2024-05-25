@@ -3,8 +3,6 @@ function createCalendar(id, year, month) {
     let mon = month - 1; // 월은 0부터 시작하므로
     let d = new Date(year, mon, 1);
 
-    let header = `<table><tr><th>${year} / ${month}</th></tr>`;
-
     let table = '<table><th>일</th><th>월</th><th>화</th><th>수</th><th>목</th><th>금</th><th>토</th></tr><tr>';
 
     // 공백 채우기
