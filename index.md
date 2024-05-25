@@ -35,7 +35,8 @@ permalink: /
             <h1>XENA</h1>
             <sup>2002.08.30</sup>
             <p>-</p>
-            <p>옹 (｡-_-｡)</p>
+            <p>
+            (｡-_-｡)</p>
       </div>
       <div class="calendar" id="calendar"></div>
 </div>
