@@ -183,42 +183,78 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
   border-radius: 50%; /* 셀을 원형으로 만듦 */
 }
 
-.custom-audio-player {
-  background-color: transparent; /* 투명한 배경색 */
+.audio-player {
+    color: white;
+    font-family: sans-serif;
+    text-align: center;
+    width: 300px;
+    background-color: transparent; /* 오디오 컨트롤러의 배경을 투명하게 설정 */
+    padding: 10px;
+    border-radius: 10px; /* 모서리를 둥글게 설정 */
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 그림자를 추가하여 구분 */
 }
 
-.custom-audio-player audio {
-  width: 100%;
+.song-title {
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
-/* 오디오 요소의 내부 스타일 */
-.custom-audio-player audio::-webkit-media-controls-panel {
-  background-color: transparent;
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
 }
 
-.custom-audio-player audio::-webkit-media-controls {
-  color: white;
+.progress-bar {
+    width: 100%;
+    margin: 0 10px;
+    background: transparent;
+    -webkit-appearance: none; /* 기본 브라우저 스타일 제거 */
 }
 
-.custom-audio-player audio::-webkit-media-controls-play-button {
-  color: white;
+.progress-bar::-webkit-slider-runnable-track {
+    background: white;
+    height: 5px;
 }
 
-.custom-audio-player audio::-webkit-media-controls-timeline {
-  background-color: white;
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
+    margin-top: -5px; /* 중앙 정렬을 위해 조정 */
 }
 
-.custom-audio-player audio::-webkit-media-controls-timeline-container {
-  color: white;
+.progress-bar::-moz-range-track {
+    background: white;
+    height: 5px;
 }
 
-.custom-audio-player audio::-webkit-media-controls-current-time-display,
-.custom-audio-player audio::-webkit-media-controls-time-remaining-display {
-  color: white;
+.progress-bar::-moz-range-thumb {
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    cursor: pointer;
 }
 
-.custom-audio-player audio::-webkit-media-controls-volume-slider {
-  color: white;
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.control-button {
+    background: none;
+    border: none;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    outline: none;
+    transition: color 0.3s;
 }
 
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
