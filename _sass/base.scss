@@ -24,9 +24,15 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 /**
  * Layout
  */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+}
+
 .profile-box-container {
     display: flex;
     align-items: flex-start;
+    margin-bottom: 20px; /* 달력과 프로필 박스 사이에 간격을 줍니다. */
 }
 
 .profile-box {
