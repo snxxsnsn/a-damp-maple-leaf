@@ -39,3 +39,11 @@ permalink: /
       </div>
       <div class="calendar" id="calendar"></div>
 </div>
+
+<!-- 오디오 플레이어 HTML -->
+<div class="audio-player">
+  <audio id="audio" controls>
+    <source src="{{ '/music/Undertale OST 090 His Theme.mp3' | relative_url }}" type="audio/mp3">
+  </audio>
+</div>
+
