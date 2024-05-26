@@ -35,6 +35,10 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     align-items: center;
 }
 
+.profile-box-container > * {
+    width: 100%;
+}
+
 .calendar, .audio-player {
     width: 45%; /* 프로필 박스의 90% */
     margin-top: 10px; /* 상단 여백 */
@@ -210,7 +214,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     border: 1.5px dashed white; /* 경계를 흰색 점선으로 설정 */
     box-shadow: 0 0 17px rgba(255, 255, 255, 0.3); /* 그림자를 추가하여 구분 */
     flex: 1; /* 오디오 플레이어가 프로필 박스와 동일한 너비를 가지도록 함 */
-    margin-top: 30px; /* 프로필 박스와의 상단 간격 설정 */
+    margin-top: 27px; /* 프로필 박스와의 상단 간격 설정 */
 }
 
 .song-title {
