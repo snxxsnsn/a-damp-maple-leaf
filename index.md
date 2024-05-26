@@ -54,4 +54,3 @@ permalink: /
             <button class="control-button next">▷</button>
             <button class="control-button replay">↻</button>
         </div>
-    </div>
