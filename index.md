@@ -29,7 +29,6 @@ permalink: /
 # PROFILE
 
 <div class="profile-container">
-    <div class="profile-box-container">
         <div class="profile-box">
             <img src="contents/juice.jpg" alt="juice">
             <div class="divider"></div> <!-- 구분선 -->
@@ -38,6 +37,7 @@ permalink: /
             <p>-</p>
             <p>(｡-_-｡)</p>
         </div>
+        <div class="profile-box-container">
         <div class="calendar" id="calendar"></div>
         <div class="audio-player">
             <div class="song-title">𝚄𝚗𝚍𝚎𝚛𝚝𝚊𝚕𝚎 𝙾𝚂𝚃 𝟶𝟿𝟶 𝙷𝚒𝚜 𝚃𝚑𝚎𝚖𝚎</div>
