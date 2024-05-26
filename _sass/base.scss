@@ -26,7 +26,8 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
  */
 .profile-container {
     display: flex;
-    flex-direction: column;
+    justify-content: space-between; /* 요소들을 좌우로 분배하여 프로필 박스는 왼쪽에, 달력과 오디오 플레이어는 오른쪽에 위치하도록 설정합니다. */
+    align-items: flex-start; /* 요소들을 수직으로 상단에 정렬합니다. */
 }
 
 .profile-box-container {
