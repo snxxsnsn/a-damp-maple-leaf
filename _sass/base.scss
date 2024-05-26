@@ -213,7 +213,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 .song-title {
-    font-size: 15px;
+    font-size: 14px;
     margin-bottom: 10px;
 }
 
@@ -229,7 +229,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     margin: 0 10px;
     background: transparent;
     flex-grow: 1;
-    height: 4px; /* 재생 바 굵기 조절 */
+    height: 2px; /* 재생 바 굵기 조절 */
 }
 
 .progress-bar::-webkit-slider-runnable-track {
