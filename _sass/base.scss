@@ -130,7 +130,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 .calendar {
   width: 90%;
   border: 1px dashed white; /* 달력의 경계를 흰색 점선으로 설정 */
-  padding: 20px; /* 달력 내부 여백을 20px로 설정 */
+  padding: 13px; /* 달력 내부 여백을 20px로 설정 */
   color: white; /* 텍스트 색상을 흰 색으로 설정 */
   background-color: transparent; /* 배경을 투명으로 설정 */
   margin-top: 9px;
@@ -138,7 +138,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 /* 필요에 따라 높이를 50%에서 60%로 조절 */
-@media (min-width: 1000px) {
+@media (min-width: 10000px) {
     .calendar {
         width: 30%;
         height: 40%;
