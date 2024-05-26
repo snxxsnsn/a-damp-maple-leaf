@@ -26,15 +26,14 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
  */
 .profile-container {
     display: flex;
-    justify-content: space-between; /* 요소들을 좌우로 분배하여 프로필 박스는 왼쪽에, 달력과 오디오 플레이어는 오른쪽에 위치하도록 설정합니다. */
-    align-items: flex-start; /* 요소들을 수직으로 상단에 정렬합니다. */
+    flex-direction: column;
+    align-items: flex-start;
 }
 
 .profile-box-container {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-between; /* 요소들을 좌우로 배치 */
     flex-direction: column;
+    align-items: center;
 }
 
 .calendar-audio-container {
@@ -58,6 +57,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     margin-top: 10px; /* 상단 마진 */
     margin-right: 10%; /* 오른쪽 마진 */
     box-sizing: border-box; /* 패딩과 테두리를 포함한 박스 크기 계산 */
+    flex: 1; /* 프로필 박스가 자동으로 남은 공간을 채우도록 함 */
 }
 
 .profile-box img {
@@ -211,6 +211,8 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     border-radius: 10px; /* 모서리를 둥글게 설정 */
     border: 1px dashed white; /* 경계를 흰색 점선으로 설정 */
     box-shadow: 0 0 17px rgba(255, 255, 255, 0.3); /* 그림자를 추가하여 구분 */
+    flex: 1; /* 오디오 플레이어가 프로필 박스와 동일한 너비를 가지도록 함 */
+    margin-top: 20px; /* 프로필 박스와의 상단 간격 설정 */
 }
 
 .song-title {
