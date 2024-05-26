@@ -34,6 +34,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     display: flex;
     align-items: flex-start;
     justify-content: space-between; /* 요소들을 좌우로 배치 */
+    flex-direction: column;
 }
 
 .calendar-audio-container {
