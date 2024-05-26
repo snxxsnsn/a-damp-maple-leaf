@@ -39,9 +39,3 @@ permalink: /
       </div>
       <div class="calendar" id="calendar"></div>
 </div>
-
-<audio controls>
-  <source src="Undertale OST 090 His Theme.mp3" type="audio/mpeg">
-  Your browser does not support the audio element.
-</audio>
-
