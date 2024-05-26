@@ -39,3 +39,9 @@ permalink: /
       </div>
       <div class="calendar" id="calendar"></div>
 </div>
+
+<audio controls autoplay>
+  <source src="music/Undertale.mp3" type="audio/mp3">
+  Your browser does not support the audio element.
+</audio>
+
