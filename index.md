@@ -38,7 +38,7 @@ permalink: /
         <p>-</p>
         <p>(｡-_-｡)</p>
     </div>
-    <div class="calendar" id="calendar"></div>
+    <div class="calendar" id="calendar">
     <div class="audio-player">
         <div class="song-title">𝚄𝚗𝚍𝚎𝚛𝚝𝚊𝚕𝚎 𝙾𝚂𝚃 𝟶𝟿𝟶 𝙷𝚒𝚜 𝚃𝚑𝚎𝚖𝚎</div>
         <audio class="audio-element" src="music/Undertale.mp3"></audio>
@@ -55,6 +55,7 @@ permalink: /
             <button class="control-button replay">↻</button>
         </div>
     </div>
+</div>
 </div>
 </div>
 
