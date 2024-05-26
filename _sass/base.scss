@@ -189,6 +189,10 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
   margin-top: 7px;
 }
 
+audio {
+  background-color: transparent; /* 플레이어의 배경색을 투명으로 설정 */
+  color: white; /* 플레이어의 텍스트 색상을 흰색으로 설정 */
+}
 
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
 p { word-wrap: break-word;  word-break: break-word;  white-space: pre-wrap; margin-bottom: 15px; }
