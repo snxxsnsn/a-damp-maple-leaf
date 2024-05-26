@@ -39,3 +39,19 @@ permalink: /
       </div>
       <div class="calendar" id="calendar"></div>
 </div>
+      <div class="audio-player">
+        <div class="song-title">𝚄𝚗𝚍𝚎𝚛𝚝𝚊𝚕𝚎 𝙾𝚂𝚃 𝟶𝟿𝟶 𝙷𝚒𝚜 𝚃𝚑𝚎𝚖𝚎</div>
+        <audio class="audio-element" src="music/Undertale.mp3"></audio>
+        <div class="controls">
+            <span class="current-time">0:00</span>
+            <input type="range" class="progress-bar" value="0">
+            <span class="duration">0:00</span>
+        </div>
+        <div class="buttons">
+            <button class="control-button shuffle">⇆</button>
+            <button class="control-button prev">◁</button>
+            <button class="control-button play-pause">▶</button>
+            <button class="control-button next">▷</button>
+            <button class="control-button replay">↻</button>
+        </div>
+    </div>
