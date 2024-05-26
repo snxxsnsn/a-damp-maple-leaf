@@ -189,14 +189,14 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     text-align: center;
     width: 300px;
     background-color: transparent; /* 오디오 컨트롤러의 배경을 투명하게 설정 */
-    padding: 10px;
+    padding: 20px;
     border-radius: 10px; /* 모서리를 둥글게 설정 */
     border: 1px dashed white; /* 경계를 흰색 점선으로 설정 */
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* 그림자를 추가하여 구분 */
+    box-shadow: 0 0 17px rgba(255, 255, 255, 0.3); /* 그림자를 추가하여 구분 */
 }
 
 .song-title {
-    font-size: 12px;
+    font-size: 15px;
     margin-bottom: 10px;
 }
 
@@ -211,7 +211,8 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     width: 100%;
     margin: 0 10px;
     background: transparent;
-    -webkit-appearance: none; /* 기본 브라우저 스타일 제거 */
+    flex-grow: 1;
+    height: 4px; /* 재생 바 굵기 조절 */
 }
 
 .progress-bar::-webkit-slider-runnable-track {
