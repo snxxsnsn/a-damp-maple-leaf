@@ -35,15 +35,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     align-items: center;
 }
 
-.profile-box-container > * {
-    width: 100%;
-}
-
-.calendar, .audio-player {
-    width: 45%; /* 프로필 박스의 90% */
-    margin-top: 10px; /* 상단 여백 */
-}
-
 .profile-box {
     position: relative; /* 부모 요소를 기준으로 자식 요소를 배치하기 위해 position: relative;로 설정합니다. */
     border: 1.5px dashed; /* 대쉬 모양의 테두리 적용 */
@@ -55,7 +46,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     margin-top: 10px; /* 상단 마진 */
     margin-right: 10%; /* 오른쪽 마진 */
     box-sizing: border-box; /* 패딩과 테두리를 포함한 박스 크기 계산 */
-    flex: 1; /* 프로필 박스가 자동으로 남은 공간을 채우도록 함 */
 }
 
 .profile-box img {
@@ -144,6 +134,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
   color: white; /* 텍스트 색상을 흰 색으로 설정 */
   background-color: transparent; /* 배경을 투명으로 설정 */
   margin-top: 9px;
+  box-sizing: border-box; /* 패딩과 테두리를 포함한 박스 크기 계산 */
 }
 
 /* 필요에 따라 높이를 50%에서 60%로 조절 */
