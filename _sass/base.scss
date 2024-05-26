@@ -139,14 +139,11 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 /* 달력 스타일을 정의합니다 */
 .calendar {
   width: 300px;
-  max-height: 50%;
   border: 1px dashed white; /* 달력의 경계를 흰색 점선으로 설정 */
   padding: 10px; /* 달력 내부 여백을 10px로 설정 */
   color: white; /* 텍스트 색상을 흰색으로 설정 */
   background-color: transparent; /* 배경을 투명으로 설정 */
   margin-top: 9px;
-  margin-right: 3%;
-  box-sizing: border-box;
 }
 
 /* 필요에 따라 높이를 50%에서 60%로 조절 */
@@ -214,7 +211,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     border: 1.5px dashed white; /* 경계를 흰색 점선으로 설정 */
     box-shadow: 0 0 17px rgba(255, 255, 255, 0.3); /* 그림자를 추가하여 구분 */
     flex: 1; /* 오디오 플레이어가 프로필 박스와 동일한 너비를 가지도록 함 */
-    margin-top: 27px; /* 프로필 박스와의 상단 간격 설정 */
+    margin-top: 25px; /* 프로필 박스와의 상단 간격 설정 */
 }
 
 .song-title {
