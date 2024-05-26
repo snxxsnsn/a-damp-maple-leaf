@@ -183,15 +183,33 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
   border-radius: 50%; /* 셀을 원형으로 만듦 */
 }
 
-.custom-audio {
-  background-color: transparent; /* 플레이어의 배경색을 투명색으로 설정 */
-  color: white; /* 플레이어의 텍스트 색상을 흰색으로 설정 */
-  margin-top: 7px;
+.custom-audio-player audio {
+  width: 100%;
 }
 
-audio {
-  background-color: transparent; /* 플레이어의 배경색을 투명으로 설정 */
-  color: white; /* 플레이어의 텍스트 색상을 흰색으로 설정 */
+.custom-audio-player audio::-webkit-media-controls-panel {
+  background-color: transparent;
+}
+
+.custom-audio-player audio::-webkit-media-controls-play-button {
+  color: white; /* 플레이 버튼 색상 */
+}
+
+.custom-audio-player audio::-webkit-media-controls-timeline {
+  background-color: rgba(255, 255, 255, 0.5); /* 타임라인 배경 색상 */
+}
+
+.custom-audio-player audio::-webkit-media-controls-timeline-container {
+  color: white; /* 타임라인 텍스트 색상 */
+}
+
+.custom-audio-player audio::-webkit-media-controls-current-time-display,
+.custom-audio-player audio::-webkit-media-controls-time-remaining-display {
+  color: white; /* 재생 시간 텍스트 색상 */
+}
+
+.custom-audio-player audio::-webkit-media-controls-volume-slider {
+  color: white; /* 볼륨 슬라이더 색상 */
 }
 
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
