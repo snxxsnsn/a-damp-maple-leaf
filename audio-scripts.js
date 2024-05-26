@@ -1,56 +1,42 @@
-const audioElement = document.querySelector('.audio-element');
-const playPauseButton = document.querySelector('.play-pause');
-const progressBar = document.querySelector('.progress-bar');
-const currentTimeElement = document.querySelector('.current-time');
-const durationElement = document.querySelector('.duration');
-const shuffleButton = document.querySelector('.shuffle');
-const prevButton = document.querySelector('.prev');
-const nextButton = document.querySelector('.next');
-const replayButton = document.querySelector('.replay');
+document.addEventListener('DOMContentLoaded', function() {
+    const audioElement = document.querySelector('.audio-element');
+    const playPauseButton = document.querySelector('.play-pause');
+    const currentTimeElement = document.querySelector('.current-time');
+    const durationElement = document.querySelector('.duration');
+    const progressBar = document.querySelector('.progress-bar');
 
-audioElement.addEventListener('loadedmetadata', () => {
-    durationElement.textContent = formatTime(audioElement.duration);
-    progressBar.max = audioElement.duration;
-});
+    playPauseButton.addEventListener('click', function() {
+        if (audioElement.paused) {
+            audioElement.play();
+            playPauseButton.textContent = '❚❚';
+        } else {
+            audioElement.pause();
+            playPauseButton.textContent = '▶';
+        }
+    });
 
-audioElement.addEventListener('timeupdate', () => {
-    currentTimeElement.textContent = formatTime(audioElement.currentTime);
-    progressBar.value = audioElement.currentTime;
-});
+    audioElement.addEventListener('timeupdate', function() {
+        const currentTime = audioElement.currentTime;
+        const duration = audioElement.duration;
 
-playPauseButton.addEventListener('click', () => {
-    if (audioElement.paused) {
-        audioElement.play();
-        playPauseButton.textContent = '❚❚';
-    } else {
-        audioElement.pause();
-        playPauseButton.textContent = '▶';
+        currentTimeElement.textContent = formatTime(currentTime);
+        progressBar.value = (currentTime / duration) * 100;
+        
+        // Update total duration if not already updated
+        if (!isNaN(duration) && durationElement.textContent === '0:00') {
+            durationElement.textContent = formatTime(duration);
+        }
+    });
+
+    progressBar.addEventListener('input', function() {
+        const duration = audioElement.duration;
+        const value = progressBar.value;
+        audioElement.currentTime = (value / 100) * duration;
+    });
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
     }
 });
-
-progressBar.addEventListener('input', () => {
-    audioElement.currentTime = progressBar.value;
-});
-
-shuffleButton.addEventListener('click', () => {
-    // Shuffle functionality to be implemented
-});
-
-prevButton.addEventListener('click', () => {
-    // Previous track functionality to be implemented
-});
-
-nextButton.addEventListener('click', () => {
-    // Next track functionality to be implemented
-});
-
-replayButton.addEventListener('click', () => {
-    audioElement.currentTime = 0;
-    audioElement.play();
-});
-
-function formatTime(seconds) {
-    const minutes = Math.floor(seconds / 60);
-    const secs = Math.floor(seconds % 60);
-    return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-}
