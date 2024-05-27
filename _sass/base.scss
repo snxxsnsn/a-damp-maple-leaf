@@ -69,7 +69,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
         border:1px dashed white;
         border-width: 1px;
         width: 40%;
-        height: 273px;
+        height: 265px;
         max-height: 500px;
         padding: 15px;
         margin-top: 8px;
@@ -282,8 +282,8 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 @media screen and (max-width: 700px) {
     .audio-player {
         width: 90%;
-        margin-top: 10%;
-        padding: 12px;
+        margin-top: 15%;
+        padding: 13px;
     }
 
     .controls {
