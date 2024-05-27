@@ -21,17 +21,13 @@ document.addEventListener('DOMContentLoaded', function() {
         const song = playlist[index];
         audioElement.src = song.src;
         songTitleElement.textContent = song.name;
+        resetProgressBar(); // Load song and reset the progress bar
+    }
 
-        // 프로그레스 바와 시간 초기화
-        progressBar.value = 0;
-        currentTimeElement.textContent = '0:00';
-        durationElement.textContent = '0:00';
-
-        // 메타데이터가 로드된 후 duration 업데이트
-        audioElement.addEventListener('loadedmetadata', function() {
-            const duration = audioElement.duration;
-            durationElement.textContent = formatTime(duration);
-        });
+    function resetProgressBar() {
+        progressBar.value = 0; // Reset progress bar value
+        currentTimeElement.textContent = formatTime(0); // Reset current time display
+        durationElement.textContent = formatTime(0); // Reset duration display
     }
 
     playPauseButton.addEventListener('click', function() {
@@ -42,6 +38,10 @@ document.addEventListener('DOMContentLoaded', function() {
             audioElement.pause();
             playPauseButton.textContent = '▶';
         }
+    });
+
+    audioElement.addEventListener('loadedmetadata', function() {
+        durationElement.textContent = formatTime(audioElement.duration);
     });
 
     audioElement.addEventListener('timeupdate', function() {
@@ -95,5 +95,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
     }
 
+    // 초기 로드 시 첫 곡을 설정하고 재생 버튼을 초기화합니다.
     loadSong(currentSongIndex);
+    resetProgressBar();
 });
