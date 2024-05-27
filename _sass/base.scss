@@ -36,25 +36,24 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 .profile-box {
-    position: relative; /* 부모 요소를 기준으로 자식 요소를 배치하기 위해 position: relative;로 설정합니다. */
-    border: 1.5px dashed; /* 대쉬 모양의 테두리 적용 */
-    padding: 25px; /* 내용과 테두리 사이 간격 */
-    width: 40%; /* 프로필 박스 너비 */
-    height: 100%; /* 높이를 자동으로 설정하여 내용에 맞게 조절 */
-    text-align: left; /* 텍스트 왼쪽 정렬 */
-    margin-bottom: 10px; /* 하단 마진 */
-    margin-top: 10px; /* 상단 마진 */
-    margin-right: 10%; /* 오른쪽 마진 */
-    box-sizing: border-box; /* 패딩과 테두리를 포함한 박스 크기 계산 */
+    position: relative;
+    border: 1.5px dashed;
+    padding: 25px;
+    width: 36%;
+    height: 330px;
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    margin-right: 10%;
 }
 
 .profile-box img {
-    max-width: 100%; /* 프로필 이미지 너비 */
-    max-height: 100%; /* 프로필 이미지 높이 */
+    max-width: 85%;
+    max-height: 85%;
     display: block;
-    margin: 0 auto; /* 가로 방향 가운데 정렬 */
-    border-radius: 50%; /* 프로필 이미지를 동그랗게 만듭니다. */
-    margin-bottom: 18px; /* 이미지와 텍스트 간격 */
+    margin: 0 auto;
+    border-radius: 50%;
+    margin-bottom: 18px
 }
 
 .profile-box .divider {
@@ -67,25 +66,26 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 /* 모바일 화면에 대한 스타일 */
 @media screen and (max-width: 700px) {
     .profile-box {
-        border: 1px dashed white; /* 테두리를 강제로 표시 */
-        border-width: 1px; /* 모바일 화면에서는 테두리 두께를 1px로 설정 */
-        width: 43vw; /* 뷰포트 너비를 43vw로 설정 */
-        height: 70vw; /* 모바일에서는 높이를 90%로 설정 */
-        padding: 15px; /* 패딩을 줄여서 공간을 확보 */
-        margin-top: 8px; /* 상단 마진 */
-        margin-bottom: 7px; /* 하단 마진 */
-        margin-right: auto;
-    }
-    
-    .profile-box img {
-        max-width: 100px; /* 이미지 크기도 줄여서 모바일에 맞게 조정 */
-        margin-bottom: 15px; /* 이미지와 텍스트 간격 조정 */
+        border:1px dashed white;
+        border-width: 1px;
+        width: 40%;
+        height: 273px;
+        max-height: 500px;
+        padding: 15px;
+        margin-top: 8px;
+        margin-bottom: 7px;
+        margin-right: 9%;
     }
 
-    /* 프로필 컨테이너를 수평으로 배치하여 프로필 박스와 달력을 나란히 배치합니다 */
+    .profile-box img {
+        width: 100%;
+        max-width: 130px;
+        margin-bottom: 15px
+    }
+
     .profile-container {
         display: flex;
-        align-items: flex-start;
+        align-items: flex-start
     }
 
         /* 프로필 박스와 달력 사이에 공간을 둡니다 */
@@ -128,26 +128,19 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 /* 달력 스타일을 정의합니다 */
 .calendar {
-  width: 90%;
-  border: 1px dashed white; /* 달력의 경계를 흰색 점선으로 설정 */
-  padding: 13px; /* 달력 내부 여백을 20px로 설정 */
-  color: white; /* 텍스트 색상을 흰 색으로 설정 */
-  background-color: transparent; /* 배경을 투명으로 설정 */
-  margin-top: 9px;
-  box-sizing: border-box; /* 패딩과 테두리를 포함한 박스 크기 계산 */
+    width: 100%;
+    border: 1px dashed white;
+    padding: 15px;
+    color: white;
+    background-color: transparent;
+    margin-top: 10px;
 }
 
-/* 필요에 따라 높이를 50%에서 60%로 조절 */
 @media (min-width: 10000px) {
     .calendar {
-        width: 30%;
+        width:30%;
         height: 40%;
-        padding: 10px;
-    }
-
-    .calendar table {
-    width: 100%;
-    height: 100%; /* 테이블 높이를 달력의 높이에 맞춤 */
+        padding: 10px
     }
 }
 
@@ -166,6 +159,23 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 .calendar th, .calendar td {
   padding: 3px; /* 셀 내부 여백을 5px로 설정 */
   text-align: center; /* 텍스트를 가운데 정렬 */
+}
+
+@media screen and (max-width: 700px) {
+.calendar {
+    width: 90%;
+    border: 1px dashed white;
+    padding: 10px;
+}
+
+    .calendar table {
+    padding: -5px;
+    }
+    
+    .calendar th,.calendar td {
+    padding: 1.5px;
+    text-align: center;
+    }
 }
 
 /* 달력의 테이블 헤더 배경 색상을 검정으로 설정 */
@@ -194,15 +204,15 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     color: white;
     font-family: sans-serif;
     text-align: center;
-    width: 280px;
+    width: 100%;
     height: auto;
-    background-color: transparent; /* 오디오 컨트롤러의 배경을 투명하게 설정 */
+    background-color: transparent;
     padding: 20px;
-    border-radius: 10px; /* 모서리를 둥글게 설정 */
-    border: 1.5px dashed white; /* 경계를 흰색 점선으로 설정 */
-    box-shadow: 0 0 17px rgba(255, 255, 255, 0.3); /* 그림자를 추가하여 구분 */
-    flex: 1; /* 오디오 플레이어가 프로필 박스와 동일한 너비를 가지도록 함 */
-    margin-top: 27px; /* 프로필 박스와의 상단 간격 설정 */
+    border-radius: 10px;
+    border: 1.5px dashed white;
+    box-shadow: 0 0 17px rgba(255,255,255,0.3);
+    flex: 1;
+    margin-top: 23px
 }
 
 .song-title {
@@ -222,12 +232,12 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     margin: 0 10px;
     background: transparent;
     flex-grow: 1;
-    height: 2px; /* 재생 바 굵기 조절 */
+    height: 2px
 }
 
 .progress-bar::-webkit-slider-runnable-track {
     background: white;
-    height: 5px;
+    height: 3px
 }
 
 .progress-bar::-webkit-slider-thumb {
@@ -237,12 +247,12 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     background: white;
     border-radius: 50%;
     cursor: pointer;
-    margin-top: -5px; /* 중앙 정렬을 위해 조정 */
+    margin-top: -6px
 }
 
 .progress-bar::-moz-range-track {
     background: white;
-    height: 5px;
+    height: 5px
 }
 
 .progress-bar::-moz-range-thumb {
@@ -250,13 +260,13 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     height: 15px;
     background: white;
     border-radius: 50%;
-    cursor: pointer;
+    cursor: pointer
 }
 
 .buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px;
+    margin-top: 10px
 }
 
 .control-button {
@@ -266,7 +276,40 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     font-size: 20px;
     cursor: pointer;
     outline: none;
-    transition: color 0.3s;
+    transition: color 0.3s
+}
+
+@media screen and (max-width: 700px) {
+    .audio-player {
+        width: 90%;
+        margin-top: 10%;
+        padding: 12px;
+    }
+
+    .controls {
+    margin-top: -3px
+}
+
+.progress-bar {
+    width: 20%;
+    margin: 0 10px;
+}
+
+.progress-bar::-webkit-slider-runnable-track {
+    background: white;
+    height: 3px
+}
+
+.progress-bar::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 12px;
+    height: 12px;
+    margin-top: -4px
+}
+
+.buttons {
+    margin-top: 5px
+}
 }
 
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
