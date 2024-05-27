@@ -13,15 +13,26 @@ document.addEventListener('DOMContentLoaded', function() {
     let isShuffle = false;
 
     const playlist = [
-        { src: 'music/Undertale.mp3', name: '𝚄𝚗𝚍𝚎𝚛𝚝𝚊𝚕𝚎 𝙾𝚂𝚃 𝟶𝟿𝟶 𝙷𝚒𝚜 𝚃𝚑𝚎𝚖𝚎' },
-        { src: 'music/LetDown.mp3', name: '𝙻𝚎𝚝 𝙳𝚘𝚠𝚗 - 𝚁𝚊𝚍𝚒𝚘𝚑𝚎𝚊𝚍' }
+        { src: 'music/Undertale.mp3', name: 'Undertale OST 090 His Theme' },
+        { src: 'music/LetDown.mp3', name: 'Let Down - Radiohead' }
     ];
 
     function loadSong(index) {
         const song = playlist[index];
         audioElement.src = song.src;
         songTitleElement.textContent = song.name;
+
+        // 프로그레스 바와 시간 초기화
+        progressBar.value = 0;
+        currentTimeElement.textContent = '0:00';
+        durationElement.textContent = '0:00';
     }
+
+    audioElement.addEventListener('loadedmetadata', function() {
+        // 메타데이터가 로드된 후 duration을 업데이트
+        const duration = audioElement.duration;
+        durationElement.textContent = formatTime(duration);
+    });
 
     playPauseButton.addEventListener('click', function() {
         if (audioElement.paused) {
@@ -39,9 +50,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
         currentTimeElement.textContent = formatTime(currentTime);
         progressBar.value = (currentTime / duration) * 100;
-
-        // 맨 처음에는 항상 0:00 지점에 위치하도록 함
-        progressBar.style.setProperty('left', '0');
 
         if (!isNaN(duration) && durationElement.textContent === '0:00') {
             durationElement.textContent = formatTime(duration);
