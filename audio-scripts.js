@@ -11,9 +11,11 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentSongIndex = 0;
     let isShuffle = false;
+
     const playlist = [
         { src: 'music/Undertale.mp3', name: '𝚄𝚗𝚍𝚎𝚛𝚝𝚊𝚕𝚎 𝙾𝚂𝚃 𝟶𝟿𝟶 𝙷𝚒𝚜 𝚃𝚑𝚎𝚖𝚎' },
         { src: 'music/LetDown.mp3', name: '𝙻𝚎𝚝 𝙳𝚘𝚠𝚗 - 𝚁𝚊𝚍𝚒𝚘𝚑𝚎𝚊𝚍' }
+    ];
 
     function loadSong(index) {
         const song = playlist[index];
