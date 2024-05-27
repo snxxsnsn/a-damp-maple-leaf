@@ -26,13 +26,13 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.value = 0;
         currentTimeElement.textContent = '0:00';
         durationElement.textContent = '0:00';
-    }
 
-    audioElement.addEventListener('loadedmetadata', function() {
-        // 메타데이터가 로드된 후 duration을 업데이트
-        const duration = audioElement.duration;
-        durationElement.textContent = formatTime(duration);
-    });
+        // 메타데이터가 로드된 후 duration 업데이트
+        audioElement.addEventListener('loadedmetadata', function() {
+            const duration = audioElement.duration;
+            durationElement.textContent = formatTime(duration);
+        });
+    }
 
     playPauseButton.addEventListener('click', function() {
         if (audioElement.paused) {
@@ -56,44 +56,4 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    progressBar.addEventListener('input', function() {
-        const duration = audioElement.duration;
-        const value = progressBar.value;
-        audioElement.currentTime = (value / 100) * duration;
-    });
-
-    prevButton.addEventListener('click', function() {
-        currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
-        loadSong(currentSongIndex);
-        audioElement.play();
-    });
-
-    nextButton.addEventListener('click', function() {
-        currentSongIndex = (currentSongIndex + 1) % playlist.length;
-        loadSong(currentSongIndex);
-        audioElement.play();
-    });
-
-    shuffleButton.addEventListener('click', function() {
-        isShuffle = !isShuffle;
-        shuffleButton.classList.toggle('active', isShuffle);
-    });
-
-    audioElement.addEventListener('ended', function() {
-        if (isShuffle) {
-            currentSongIndex = Math.floor(Math.random() * playlist.length);
-        } else {
-            currentSongIndex = (currentSongIndex + 1) % playlist.length;
-        }
-        loadSong(currentSongIndex);
-        audioElement.play();
-    });
-
-    function formatTime(seconds) {
-        const minutes = Math.floor(seconds / 60);
-        const secs = Math.floor(seconds % 60);
-        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
-    }
-
-    loadSong(currentSongIndex);
-});
+    
