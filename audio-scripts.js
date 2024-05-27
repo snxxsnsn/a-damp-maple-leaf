@@ -40,6 +40,14 @@ document.addEventListener('DOMContentLoaded', function() {
         currentTimeElement.textContent = formatTime(currentTime);
         progressBar.value = (currentTime / duration) * 100;
 
+        // 재생 지점이 0:00인 경우 동그라미를 왼쪽 끝에 위치시킴
+        if (currentTime === 0) {
+            progressBar.style.setProperty('--progress', 0);
+        } else {
+            // 재생 지점이 0:00이 아닌 경우 재생 지점에 맞게 CSS 변수 설정
+            progressBar.style.setProperty('--progress', currentTime / duration);
+        }
+
         if (!isNaN(duration) && durationElement.textContent === '0:00') {
             durationElement.textContent = formatTime(duration);
         }
