@@ -40,9 +40,6 @@ document.addEventListener('DOMContentLoaded', function() {
         currentTimeElement.textContent = formatTime(currentTime);
         progressBar.value = (currentTime / duration) * 100;
 
-        // 맨 처음에는 항상 0:00 지점에 위치하도록 함
-        progressBar.style.setProperty('left', '0');
-
         if (!isNaN(duration) && durationElement.textContent === '0:00') {
             durationElement.textContent = formatTime(duration);
         }
