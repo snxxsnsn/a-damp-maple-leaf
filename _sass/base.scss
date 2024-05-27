@@ -244,7 +244,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 .progress-bar::-webkit-slider-runnable-track {
     background: white;
-    height: 5px
+    height: 3px
 }
 
 .progress-bar::-webkit-slider-thumb {
@@ -254,7 +254,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     background: white;
     border-radius: 50%;
     cursor: pointer;
-    margin-top: -5px
+    margin-top: -6px
 }
 
 .progress-bar::-moz-range-track {
@@ -304,14 +304,14 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 .progress-bar::-webkit-slider-runnable-track {
     background: white;
-    height: 5px
+    height: 3px
 }
 
 .progress-bar::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 12px;
     height: 12px;
-    margin-top: -5px
+    margin-top: -6px
 }
 
 .buttons {
