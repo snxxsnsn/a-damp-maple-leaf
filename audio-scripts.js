@@ -56,4 +56,44 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     });
 
-    
+    progressBar.addEventListener('input', function() {
+        const duration = audioElement.duration;
+        const value = progressBar.value;
+        audioElement.currentTime = (value / 100) * duration;
+    });
+
+    prevButton.addEventListener('click', function() {
+        currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
+        loadSong(currentSongIndex);
+        audioElement.play();
+    });
+
+    nextButton.addEventListener('click', function() {
+        currentSongIndex = (currentSongIndex + 1) % playlist.length;
+        loadSong(currentSongIndex);
+        audioElement.play();
+    });
+
+    shuffleButton.addEventListener('click', function() {
+        isShuffle = !isShuffle;
+        shuffleButton.classList.toggle('active', isShuffle);
+    });
+
+    audioElement.addEventListener('ended', function() {
+        if (isShuffle) {
+            currentSongIndex = Math.floor(Math.random() * playlist.length);
+        } else {
+            currentSongIndex = (currentSongIndex + 1) % playlist.length;
+        }
+        loadSong(currentSongIndex);
+        audioElement.play();
+    });
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    loadSong(currentSongIndex);
+});
