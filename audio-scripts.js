@@ -21,6 +21,9 @@ document.addEventListener('DOMContentLoaded', function() {
         const song = playlist[index];
         audioElement.src = song.src;
         songTitleElement.textContent = song.name;
+        audioElement.addEventListener('loadedmetadata', function() {
+            durationElement.textContent = formatTime(audioElement.duration);
+        });
     }
 
     playPauseButton.addEventListener('click', function() {
