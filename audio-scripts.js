@@ -21,9 +21,6 @@ document.addEventListener('DOMContentLoaded', function() {
         const song = playlist[index];
         audioElement.src = song.src;
         songTitleElement.textContent = song.name;
-        audioElement.addEventListener('loadedmetadata', function() {
-            durationElement.textContent = formatTime(audioElement.duration);
-        });
     }
 
     playPauseButton.addEventListener('click', function() {
@@ -43,13 +40,8 @@ document.addEventListener('DOMContentLoaded', function() {
         currentTimeElement.textContent = formatTime(currentTime);
         progressBar.value = (currentTime / duration) * 100;
 
-        // 재생 지점이 0:00인 경우 동그라미를 왼쪽 끝에 위치시킴
-        if (currentTime === 0) {
-            progressBar.style.setProperty('left', '0');
-        } else {
-            // 재생 지점이 0:00이 아닌 경우 재생 지점에 맞게 위치 조정
-            progressBar.style.setProperty('left', `${(currentTime / duration) * 100}%`);
-        }
+        // 맨 처음에는 항상 0:00 지점에 위치하도록 함
+        progressBar.style.setProperty('left', '0');
 
         if (!isNaN(duration) && durationElement.textContent === '0:00') {
             durationElement.textContent = formatTime(duration);
