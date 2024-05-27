@@ -156,11 +156,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     }
 }
 
-.audio-player {
-    width: 30vw;
-    height: auto;
-}
-
 /* 달력 테이블 스타일 */
 .calendar table {
     width: 100%;
@@ -249,7 +244,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 .progress-bar::-webkit-slider-runnable-track {
     background: white;
-    height: 3px
+    height: 5px
 }
 
 .progress-bar::-webkit-slider-thumb {
@@ -259,7 +254,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     background: white;
     border-radius: 50%;
     cursor: pointer;
-    margin-top: -6px
+    margin-top: -5px
 }
 
 .progress-bar::-moz-range-track {
@@ -309,14 +304,14 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 .progress-bar::-webkit-slider-runnable-track {
     background: white;
-    height: 3px
+    height: 5px
 }
 
 .progress-bar::-webkit-slider-thumb {
     -webkit-appearance: none;
     width: 12px;
     height: 12px;
-    margin-top: -4px
+    margin-top: -5px
 }
 
 .buttons {
