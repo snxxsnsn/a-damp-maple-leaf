@@ -32,7 +32,7 @@ permalink: /
         <div class="profile-box">
             <img src="contents/juice.jpg" alt="juice">
             <div class="divider"></div> <!-- 구분선 -->
-            <h1>XENA</h1>
+            <h1>𝚇𝙴𝙽𝙰</h1>
             <sup>2002.08.30</sup>
             <p>-</p>
             <p>(｡-_-｡)</p>
