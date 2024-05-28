@@ -34,16 +34,15 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.style.marginLeft = "calc(-5px + 50%)";
     }
 
-    function togglePlayPause() {
-        isPlaying = !isPlaying;
-        if (isPlaying) {
+    playPauseButton.addEventListener('click', function() {
+        if (audioElement.paused) {
             audioElement.play();
             playPauseButton.textContent = '❚❚';
         } else {
             audioElement.pause();
             playPauseButton.textContent = '▶';
         }
-    }
+    });
 
     playPauseButton.addEventListener('click', togglePlayPause);
 
