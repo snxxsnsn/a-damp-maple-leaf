@@ -98,4 +98,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // 초기 로드 시 첫 곡을 설정하고 재생 버튼을 초기화합니다.
     loadSong(currentSongIndex);
     resetProgressBar();
+    
+    // 슬라이더 초기값을 0으로 설정
+    progressBar.value = 0;
 });
