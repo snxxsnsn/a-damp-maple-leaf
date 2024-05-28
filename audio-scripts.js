@@ -116,8 +116,4 @@ document.addEventListener('DOMContentLoaded', function() {
         durationElement.textContent = formatTime(audioElement.duration);
         progressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
         currentTimeElement.textContent = formatTime(audioElement.currentTime);
-    } else {
-        audioElement.addEventListener('loadedmetadata', function() {
-            durationElement.textContent = formatTime(audioElement.duration);
-            progressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
-            currentTimeElement.textContent = formatTime(audio
+   
