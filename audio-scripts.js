@@ -34,15 +34,16 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.style.marginLeft = "calc(-5px + 50%)";
     }
 
-    playPauseButton.addEventListener('click', function() {
-        if (audioElement.paused) {
+       function togglePlayPause() {
+        isPlaying = !isPlaying;
+        if (isPlaying) {
             audioElement.play();
             playPauseButton.textContent = '❚❚';
         } else {
             audioElement.pause();
             playPauseButton.textContent = '▶';
         }
-    });
+    }
 
     playPauseButton.addEventListener('click', togglePlayPause);
 
@@ -92,7 +93,7 @@ document.addEventListener('DOMContentLoaded', function() {
             currentSongIndex = (currentSongIndex + 1) % playlist.length;
         }
         loadSong(currentSongIndex);
-        togglePlayPause();
+        audioElement.play();
     });
 
     function formatTime(seconds) {
