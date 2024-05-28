@@ -219,7 +219,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     border: 1.5px dashed white;
     box-shadow: 0 0 17px rgba(255,255,255,0.3);
     flex: 1;
-    margin-top: 40px
+    margin-top: 40px;
 }
 
 .song-title {
@@ -239,27 +239,30 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     margin: 0 10px;
     background: transparent;
     flex-grow: 1;
-    height: 2px
+    height: 2px;
+    -webkit-appearance: none; /* Ensure consistent appearance across browsers */
+    appearance: none;
 }
 
 .progress-bar::-webkit-slider-runnable-track {
     background: white;
-    height: 3px
+    height: 3px;
 }
 
 .progress-bar::-webkit-slider-thumb {
     -webkit-appearance: none;
+    appearance: none;
     width: 15px;
     height: 15px;
     background: white;
     border-radius: 50%;
     cursor: pointer;
-    margin-top: -6px
+    margin-top: -6px;
 }
 
 .progress-bar::-moz-range-track {
     background: white;
-    height: 5px
+    height: 5px;
 }
 
 .progress-bar::-moz-range-thumb {
@@ -267,13 +270,13 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     height: 15px;
     background: white;
     border-radius: 50%;
-    cursor: pointer
+    cursor: pointer;
 }
 
 .buttons {
     display: flex;
     justify-content: space-between;
-    margin-top: 10px
+    margin-top: 10px;
 }
 
 .control-button {
@@ -283,7 +286,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     font-size: 20px;
     cursor: pointer;
     outline: none;
-    transition: color 0.3s
+    transition: color 0.3s;
 }
 
 @media screen and (max-width: 700px) {
@@ -294,30 +297,31 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     }
 
     .controls {
-    margin-top: -3px
+        margin-top: -3px;
+    }
+
+    .progress-bar {
+        width: 20%;
+        margin: 0 10px;
+    }
+
+    .progress-bar::-webkit-slider-runnable-track {
+        background: white;
+        height: 3px;
+    }
+
+    .progress-bar::-webkit-slider-thumb {
+        -webkit-appearance: none;
+        width: 12px;
+        height: 12px;
+        margin-top: -4px;
+    }
+
+    .buttons {
+        margin-top: 5px;
+    }
 }
 
-.progress-bar {
-    width: 20%;
-    margin: 0 10px;
-}
-
-.progress-bar::-webkit-slider-runnable-track {
-    background: white;
-    height: 3px
-}
-
-.progress-bar::-webkit-slider-thumb {
-    -webkit-appearance: none;
-    width: 12px;
-    height: 12px;
-    margin-top: -4px
-}
-
-.buttons {
-    margin-top: 5px
-}
-}
 
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
 p { word-wrap: break-word;  word-break: break-word;  white-space: pre-wrap; margin-bottom: 15px; }
