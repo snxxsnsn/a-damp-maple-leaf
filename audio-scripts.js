@@ -75,6 +75,9 @@ document.addEventListener('DOMContentLoaded', function() {
     nextButton.addEventListener('click', function() {
         currentSongIndex = (currentSongIndex + 1) % playlist.length;
         loadSong(currentSongIndex);
+        if (!audioElement.paused) {
+            playPauseButton.textContent = '❚❚'; // 재생 중이면 버튼 텍스트를 일시 정지 아이콘으로 변경
+        }
         audioElement.play();
         audioPlayerElement.classList.add('playing'); // 음악 재생 중일 때 클래스 추가
     });
@@ -117,17 +120,4 @@ document.addEventListener('DOMContentLoaded', function() {
         audioElement.addEventListener('loadedmetadata', function() {
             durationElement.textContent = formatTime(audioElement.duration);
             progressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
-            currentTimeElement.textContent = formatTime(audioElement.currentTime);
-        });
-    }
-
-    // 추가: 오디오가 일시 정지되면 그림자 제거
-    audioElement.addEventListener('pause', function() {
-        audioPlayerElement.classList.remove('playing');
-    });
-
-    // 추가: 오디오가 재생되면 그림자 추가
-    audioElement.addEventListener('play', function() {
-        audioPlayerElement.classList.add('playing');
-    });
-});
+            currentTimeElement.textContent = formatTime(audio
