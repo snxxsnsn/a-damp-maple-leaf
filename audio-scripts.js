@@ -35,12 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (audioElement.paused) {
             audioElement.play();
             playPauseButton.textContent = '❚❚';
-            audioPlayerElement.classList.add('playing', 'animated'); // 음악 재생 중일 때 클래스 추가
         } else {
             audioElement.pause();
             playPauseButton.textContent = '▶';
-            audioPlayerElement.classList.remove('playing', 'animated'); // 음악 재생 중이 아닐 때 클래스 제거
         }
+        audioPlayerElement.classList.toggle('playing', !audioElement.paused);
     });
 
     audioElement.addEventListener('loadedmetadata', function() {
@@ -69,17 +68,12 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
         loadSong(currentSongIndex);
         audioElement.play();
-        audioPlayerElement.classList.add('playing', 'animated'); // 음악 재생 중일 때 클래스 추가
     });
 
     nextButton.addEventListener('click', function() {
         currentSongIndex = (currentSongIndex + 1) % playlist.length;
         loadSong(currentSongIndex);
-        if (!audioElement.paused) {
-            playPauseButton.textContent = '❚❚'; // 재생 중이면 버튼 텍스트를 일시 정지 아이콘으로 변경
-        }
         audioElement.play();
-        audioPlayerElement.classList.add('playing', 'animated'); // 음악 재생 중일 때 클래스 추가
     });
 
     shuffleButton.addEventListener('click', function() {
@@ -95,7 +89,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         loadSong(currentSongIndex);
         audioElement.play();
-        audioPlayerElement.classList.add('playing', 'animated'); // 음악 재생 중일 때 클래스 추가
     });
 
     function formatTime(seconds) {
@@ -114,4 +107,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // 추가: 오디오 요소가 준비되었는지 확인하고 초기화
     if (audioElement.readyState > 0) {
         durationElement.textContent = formatTime(audioElement.duration);
-        progressBar.value = (audioElement.currentTime
+        progressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
+        currentTimeElement.textContent = formatTime(audioElement.currentTime);
+    } else {
+        audioElement.addEventListener('loadedmetadata', function() {
+            durationElement.textContent = formatTime(audioElement.duration);
+            progressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
+            currentTimeElement.textContent = formatTime(audioElement.currentTime);
+        });
+    }
+});
