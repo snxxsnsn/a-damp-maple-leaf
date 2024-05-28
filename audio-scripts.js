@@ -12,7 +12,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
     let currentSongIndex = 0;
     let isShuffle = false;
-    let isPlaying = false;
 
     const playlist = [
         { src: 'music/Undertale.mp3', name: 'Undertale OST 090 His Theme' },
@@ -30,22 +29,17 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.value = 0; // Reset progress bar value
         currentTimeElement.textContent = formatTime(0); // Reset current time display
         durationElement.textContent = formatTime(0); // Reset duration display
-        // 슬라이더를 중앙으로 이동
-        progressBar.style.marginLeft = "calc(-5px + 50%)";
     }
 
-       function togglePlayPause() {
-        isPlaying = !isPlaying;
-        if (isPlaying) {
+    playPauseButton.addEventListener('click', function() {
+        if (audioElement.paused) {
             audioElement.play();
             playPauseButton.textContent = '❚❚';
         } else {
             audioElement.pause();
             playPauseButton.textContent = '▶';
         }
-    }
-
-    playPauseButton.addEventListener('click', togglePlayPause);
+    });
 
     audioElement.addEventListener('loadedmetadata', function() {
         durationElement.textContent = formatTime(audioElement.duration);
@@ -72,13 +66,13 @@ document.addEventListener('DOMContentLoaded', function() {
     prevButton.addEventListener('click', function() {
         currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
         loadSong(currentSongIndex);
-        togglePlayPause();
+        audioElement.play();
     });
 
     nextButton.addEventListener('click', function() {
         currentSongIndex = (currentSongIndex + 1) % playlist.length;
         loadSong(currentSongIndex);
-        togglePlayPause();
+        audioElement.play();
     });
 
     shuffleButton.addEventListener('click', function() {
@@ -106,7 +100,10 @@ document.addEventListener('DOMContentLoaded', function() {
     loadSong(currentSongIndex);
     resetProgressBar();
 
-        // 추가: 오디오 요소가 준비되었는지 확인하고 초기화
+    // 슬라이더 초기값을 0으로 설정하고 오디오 요소가 준비되면 초기 상태를 설정합니다.
+    progressBar.value = 0;
+
+    // 추가: 오디오 요소가 준비되었는지 확인하고 초기화
     if (audioElement.readyState > 0) {
         durationElement.textContent = formatTime(audioElement.duration);
         progressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
@@ -119,15 +116,13 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // 오디오가 재생 또는 일시 정지되면 그림자 및 애니메이션 적용
+    // 추가: 오디오가 일시 정지되면 그림자 제거
     audioElement.addEventListener('play', function() {
-        audioPlayerElement.classList.add('playing');
-        setTimeout(function() {
-            audioPlayerElement.classList.add('animated');
-        }, 600); // 0.6초 뒤에 애니메이션 적용
+        audioPlayerElement.classList.add('playing', 'animated');
     });
 
     audioElement.addEventListener('pause', function() {
         audioPlayerElement.classList.remove('playing', 'animated');
     });
+
 });
