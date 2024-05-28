@@ -217,27 +217,26 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     padding: 20px;
     border-radius: 10px;
     border: 1.5px dashed white;
-    flex: 1;
     margin-top: 40px;
     transition: box-shadow 0.7s ease;
 }
 
 .audio-player.playing {
-    box-shadow: 0 0 55px rgba(200,200,255,0.5);
+    box-shadow: 0 0 55px rgba(200, 200, 255, 0.5);
     transition: box-shadow 0.6s ease;
     animation: shadowPulse 2.2s infinite alternate;
 }
 
 @keyframes shadowPulse {
-  0% {
-    box-shadow: 0 0 50px rgba(200, 200, 255, 0.4);
-  }
-  50% {
-    box-shadow: 0 0 70px rgba(200, 200, 255, 0.6);
-  }
-  100% {
-    box-shadow: 0 0 50px rgba(200, 200, 255, 0.4);
-  }
+    0% {
+        box-shadow: 0 0 50px rgba(200, 200, 255, 0.4);
+    }
+    50% {
+        box-shadow: 0 0 70px rgba(200, 200, 255, 0.6);
+    }
+    100% {
+        box-shadow: 0 0 50px rgba(200, 200, 255, 0.4);
+    }
 }
 
 .song-title {
@@ -249,16 +248,30 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
     margin-top: 10px;
 }
 
-.progress-bar {
+.time-controls {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     width: 100%;
+    margin-top: 10px;
+}
+
+.current-time,
+.duration {
+    flex: none;
+}
+
+.progress-bar {
+    width: calc(100% - 100px); /* Adjust width considering the space needed for current-time and duration */
     margin: 0 10px;
     background: transparent;
     flex-grow: 1;
     height: 2px;
-    -webkit-appearance: none; /* Ensure consistent appearance across browsers */
+    -webkit-appearance: none;
     appearance: none;
 }
 
@@ -319,7 +332,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     }
 
     .progress-bar {
-        width: 20%;
+        width: calc(100% - 60px); /* Adjusted for smaller screens */
         margin: 0 10px;
     }
 
@@ -339,7 +352,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
         margin-top: 5px;
     }
 }
-
 
 
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
