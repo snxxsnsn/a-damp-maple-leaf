@@ -106,6 +106,19 @@ document.addEventListener('DOMContentLoaded', function() {
     loadSong(currentSongIndex);
     resetProgressBar();
 
+        // 추가: 오디오 요소가 준비되었는지 확인하고 초기화
+    if (audioElement.readyState > 0) {
+        durationElement.textContent = formatTime(audioElement.duration);
+        progressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
+        currentTimeElement.textContent = formatTime(audioElement.currentTime);
+    } else {
+        audioElement.addEventListener('loadedmetadata', function() {
+            durationElement.textContent = formatTime(audioElement.duration);
+            progressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
+            currentTimeElement.textContent = formatTime(audioElement.currentTime);
+        });
+    }
+
     // 오디오가 재생 또는 일시 정지되면 그림자 및 애니메이션 적용
     audioElement.addEventListener('play', function() {
         audioPlayerElement.classList.add('playing');
