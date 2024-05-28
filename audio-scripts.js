@@ -35,11 +35,11 @@ document.addEventListener('DOMContentLoaded', function() {
         if (audioElement.paused) {
             audioElement.play();
             playPauseButton.textContent = '❚❚';
-            audioPlayerElement.classList.add('playing', 'animated'); // 음악 재생 중일 때 클래스 추가
+            audioPlayerElement.classList.add('playing'); // 음악 재생 중일 때 클래스 추가
         } else {
             audioElement.pause();
             playPauseButton.textContent = '▶';
-            audioPlayerElement.classList.remove('playing', 'animated'); // 음악 재생 중이 아닐 때 클래스 제거
+            audioPlayerElement.classList.remove('playing'); // 음악 재생 중이 아닐 때 클래스 제거
         }
     });
 
@@ -69,7 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
         loadSong(currentSongIndex);
         audioElement.play();
-        audioPlayerElement.classList.add('playing', 'animated'); // 음악 재생 중일 때 클래스 추가
+        audioPlayerElement.classList.add('playing'); // 음악 재생 중일 때 클래스 추가
     });
 
     nextButton.addEventListener('click', function() {
@@ -78,4 +78,46 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!audioElement.paused) {
             playPauseButton.textContent = '❚❚'; // 재생 중이면 버튼 텍스트를 일시 정지 아이콘으로 변경
         }
-        audioElement
+        audioElement.play();
+        audioPlayerElement.classList.add('playing'); // 음악 재생 중일 때 클래스 추가
+    });
+
+    shuffleButton.addEventListener('click', function() {
+        isShuffle = !isShuffle;
+        shuffleButton.classList.toggle('active', isShuffle);
+    });
+
+    audioElement.addEventListener('ended', function() {
+        if (isShuffle) {
+            currentSongIndex = Math.floor(Math.random() * playlist.length);
+        } else {
+            currentSongIndex = (currentSongIndex + 1) % playlist.length;
+        }
+        loadSong(currentSongIndex);
+        audioElement.play();
+        audioPlayerElement.classList.add('playing'); // 음악 재생 중일 때 클래스 추가
+    });
+
+    function formatTime(seconds) {
+        const minutes = Math.floor(seconds / 60);
+        const secs = Math.floor(seconds % 60);
+        return `${minutes}:${secs < 10 ? '0' : ''}${secs}`;
+    }
+
+    // 초기 로드 시 첫 곡을 설정하고 재생 버튼을 초기화합니다.
+    loadSong(currentSongIndex);
+    resetProgressBar();
+
+    // 슬라이더 초기값을 0으로 설정하고 오디오 요소가 준비되면 초기 상태를 설정합니다.
+    progressBar.value = 0;
+
+    // 추가: 오디오 요소가 준비되었는지 확인하고 초기화
+    if (audioElement.readyState > 0) {
+        durationElement.textContent = formatTime(audioElement.duration);
+        progressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
+        currentTimeElement.textContent = formatTime(audioElement.currentTime);
+    } else {
+        audioElement.addEventListener('loadedmetadata', function() {
+            durationElement.textContent = formatTime(audioElement.duration);
+            progressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
+            currentTimeElement.textContent = formatTime(audio
