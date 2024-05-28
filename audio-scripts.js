@@ -30,6 +30,8 @@ document.addEventListener('DOMContentLoaded', function() {
         progressBar.value = 0; // Reset progress bar value
         currentTimeElement.textContent = formatTime(0); // Reset current time display
         durationElement.textContent = formatTime(0); // Reset duration display
+        // 슬라이더를 중앙으로 이동
+        progressBar.style.marginLeft = "calc(-5px + 50%)";
     }
 
     function togglePlayPause() {
