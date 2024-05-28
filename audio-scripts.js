@@ -35,11 +35,9 @@ document.addEventListener('DOMContentLoaded', function() {
         if (audioElement.paused) {
             audioElement.play();
             playPauseButton.textContent = '❚❚';
-            audioPlayerElement.classList.add('playing'); // 음악 재생 중일 때 클래스 추가
         } else {
             audioElement.pause();
             playPauseButton.textContent = '▶';
-            audioPlayerElement.classList.remove('playing'); // 음악 재생 중이 아닐 때 클래스 제거
         }
     });
 
@@ -69,14 +67,12 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
         loadSong(currentSongIndex);
         audioElement.play();
-        audioPlayerElement.classList.add('playing'); // 음악 재생 중일 때 클래스 추가
     });
 
     nextButton.addEventListener('click', function() {
         currentSongIndex = (currentSongIndex + 1) % playlist.length;
         loadSong(currentSongIndex);
         audioElement.play();
-        audioPlayerElement.classList.add('playing'); // 음악 재생 중일 때 클래스 추가
     });
 
     shuffleButton.addEventListener('click', function() {
@@ -92,7 +88,6 @@ document.addEventListener('DOMContentLoaded', function() {
         }
         loadSong(currentSongIndex);
         audioElement.play();
-        audioPlayerElement.classList.add('playing'); // 음악 재생 중일 때 클래스 추가
     });
 
     function formatTime(seconds) {
@@ -122,12 +117,12 @@ document.addEventListener('DOMContentLoaded', function() {
     }
 
     // 추가: 오디오가 일시 정지되면 그림자 제거
-    audioElement.addEventListener('pause', function() {
-        audioPlayerElement.classList.remove('playing');
+    audioElement.addEventListener('play', function() {
+        audioPlayerElement.classList.add('playing', 'animated');
     });
 
-    // 추가: 오디오가 재생되면 그림자 추가
-    audioElement.addEventListener('play', function() {
-        audioPlayerElement.classList.add('playing');
+    audioElement.addEventListener('pause', function() {
+        audioPlayerElement.classList.remove('playing', 'animated');
     });
+
 });
