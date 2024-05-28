@@ -98,7 +98,20 @@ document.addEventListener('DOMContentLoaded', function() {
     // 초기 로드 시 첫 곡을 설정하고 재생 버튼을 초기화합니다.
     loadSong(currentSongIndex);
     resetProgressBar();
-    
-    // 슬라이더 초기값을 0으로 설정
+
+    // 슬라이더 초기값을 0으로 설정하고 오디오 요소가 준비되면 초기 상태를 설정합니다.
     progressBar.value = 0;
+
+    // 추가: 오디오 요소가 준비되었는지 확인하고 초기화
+    if (audioElement.readyState > 0) {
+        durationElement.textContent = formatTime(audioElement.duration);
+        progressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
+        currentTimeElement.textContent = formatTime(audioElement.currentTime);
+    } else {
+        audioElement.addEventListener('loadedmetadata', function() {
+            durationElement.textContent = formatTime(audioElement.duration);
+            progressBar.value = (audioElement.currentTime / audioElement.duration) * 100;
+            currentTimeElement.textContent = formatTime(audioElement.currentTime);
+        });
+    }
 });
