@@ -219,10 +219,11 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     border: 1.5px dashed white;
     flex: 1;
     margin-top: 40px;
+    /* 기본 상태에서는 그림자 없음 */
 }
 
 .audio-player.playing {
-    box-shadow: 0 0 17px rgba(255, 255, 255, 0.3); /* 음악 재생 중일 때 그림자 */
+    box-shadow: 0 0 22px rgba(255, 255, 255, 0.3); /* 음악 재생 중일 때 그림자 */
 }
 
 .song-title {
@@ -324,6 +325,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
         margin-top: 5px;
     }
 }
+
 
 
 .container { width: $container-width;  max-width: $container-max-width;  margin-right: auto;  margin-left: auto; }
