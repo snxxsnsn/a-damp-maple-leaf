@@ -69,6 +69,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSongIndex = (currentSongIndex - 1 + playlist.length) % playlist.length;
         loadSong(currentSongIndex);
         audioElement.play();
+        playPauseButton.textContent = '❚❚'; // 아이콘 변경
         audioPlayerElement.classList.add('playing'); // 음악 재생 중일 때 클래스 추가
     });
 
@@ -76,6 +77,7 @@ document.addEventListener('DOMContentLoaded', function() {
         currentSongIndex = (currentSongIndex + 1) % playlist.length;
         loadSong(currentSongIndex);
         audioElement.play();
+        playPauseButton.textContent = '❚❚'; // 아이콘 변경
         audioPlayerElement.classList.add('playing'); // 음악 재생 중일 때 클래스 추가
     });
 
