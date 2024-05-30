@@ -340,8 +340,11 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
 .buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     margin-top: 10px;
+    width: 100%; /* 버튼 영역을 가운데 정렬하기 위해 너비를 설정합니다. */
+    margin-left: auto; /* 좌우 여백을 동일하게 하기 위해 왼쪽 여백을 자동으로 설정합니다. */
+    margin-right: auto; /* 좌우 여백을 동일하게 하기 위해 오른쪽 여백을 자동으로 설정합니다. */
 }
 
 .control-button {
