@@ -248,26 +248,34 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 .audio-player.playing {
-    box-shadow: 0 0 55px rgba(200, 200, 255, 0.5);
+    box-shadow: 0 0 55px rgba(130,180,255,0.5);
     transition: box-shadow 0.6s ease;
-    animation: shadowPulse 2.2s infinite alternate;
+    animation: shadowPulse 2.2s infinite alternate
 }
 
 @keyframes shadowPulse {
     0% {
-        box-shadow: 0 0 50px rgba(200, 200, 255, 0.4);
+        box-shadow: 0 0 50px rgba(160,220,220,0.5);
     }
+
     50% {
-        box-shadow: 0 0 70px rgba(200, 200, 255, 0.6);
+        box-shadow: 0 0 70px rgba(160,200,255,0.5);
     }
+
     100% {
-        box-shadow: 0 0 50px rgba(200, 200, 255, 0.4);
+        box-shadow: 0 0 50px rgba(200,190,255,0.5);
     }
 }
 
 .song-title {
+    overflow: hidden;
+    white-space: nowrap;
+    max-width: 130px;
+    margin-left: 10%;
+    margin-right: 10%;
     font-size: 14px;
     margin-bottom: 10px;
+    text-overflow: ellipsis; /* 텍스트가 넘치면 생략 부호로 표시 */
 }
 
 .controls {
