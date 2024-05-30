@@ -214,14 +214,14 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 .audio-player::before {
-    content: '⋆ ｡ﾟ ☁︎ ｡⋆ ｡ ﾟ ☾ ﾟ ｡ ⋆ \A . • . ° *★ ☁︎⋆ ｡ﾟ \A . • . * • ⋆';
+    content: '⋆ ｡ﾟ ☁︎ ｡⋆ ｡ ﾟ ☾  ｡ ⋆ \A . • . ° *★ ☁︎⋆ ｡ﾟ \A . • . * • ⋆';
     position: absolute;
-    top: 43%;
-    left: 50%;
+    top: 50%;
+    left: 52%;
     transform: translate(-50%, -50%);
     white-space: pre;
     text-align: center;
-    font-size: 38px; /* 배경 텍스트 크기 조절 */
+    font-size: 40px; /* 배경 텍스트 크기 조절 */
     color: rgba(255, 255, 255, 0.37); /* 배경 텍스트 투명도 조절 */
     z-index: -1; /* 오디오 플레이어 뒤에 배치 */
     pointer-events: none; /* 배경 텍스트가 클릭을 방해하지 않도록 설정 */
@@ -347,10 +347,22 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 }
 
 @media screen and (max-width: 700px) {
+    .audio-player::before {
+    top: 43%;
+    left: 50%;
+    white-space: pre;
+    text-align: center;
+    font-size: 38px; /* 배경 텍스트 크기 조절 */
+    max-width: 100%; /* 부모 요소의 너비를 초과하지 않도록 설정 */
+    max-height: 100%; /* 부모 요소의 높이를 초과하지 않도록 설정 */
+    clip-path: inset(0 0 0 0); /* 텍스트가 요소 밖으로 넘치지 않도록 설정 */
+    overflow: hidden; /* 텍스트가 요소 밖으로 넘치지 않도록 설정 */
+    }   
+    
     .audio-player {
-        width: 90%;
+        width: 85%;
         margin-top: 15%;
-        padding: 13px;
+        padding: 15px;
     }
 
     .controls {
