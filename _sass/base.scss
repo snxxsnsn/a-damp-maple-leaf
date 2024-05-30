@@ -354,6 +354,7 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
     margin: auto;
     font-size: 20px;
     cursor: pointer;
+    max-width: 6vw;
     outline: none;
     transition: color 0.3s;
 }
@@ -400,10 +401,6 @@ a:hover { color: var(--background-color); background-color: var(--base-color); }
 
     .buttons {
         margin-top: 5px;
-    }
-
-    .control-button {
-    max-width: 1px;
     }
 }
 
