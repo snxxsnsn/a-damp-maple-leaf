@@ -15,7 +15,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
     const playlist = [
         { src: 'music/Undertale.mp3', name: 'Undertale OST 090 His Theme' },
-        { src: 'music/LetDown.mp3', name: 'Let Down - Radiohead' }
+        { src: 'music/LetDown.mp3', name: 'Let Down - Radiohead' },
+        { src: 'music/THORNAPPLE_Galaxy.mp3', name: '은하 - 쏜애플(THORNAPPLE)' }
     ];
 
     function loadSong(index) {
