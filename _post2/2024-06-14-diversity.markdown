@@ -10,7 +10,7 @@ categories:
 - - -
   <sup>date:   2024-06-14</sup>
 
- <img src="/contents/paint2.jpg" alt="Description of Image" width="500" height="300">
+ <img src="/contents/paint2.jpg" width="500" height="300">
 
 <br>
 
