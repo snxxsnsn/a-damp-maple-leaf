@@ -8,6 +8,7 @@
 
   <body>
      <div class="profile-container">
+              {%- include header.html -%}
        <div class="profile-box">
             <img src="contents/juice.jpg" alt="juice">
             <div class="divider"></div> <!-- 구분선 -->
@@ -17,12 +18,10 @@
             <p>(｡-_-｡)</p>
         </div>
     <div class="container">
-    </div>
-        {%- include header.html -%}
-      
-    <main>
+       <main>
       {{ content }}
     </main>
+    </div>
 
     {%- include footer.html -%}
 
