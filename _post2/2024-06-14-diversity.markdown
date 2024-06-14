@@ -5,10 +5,10 @@ date:   2024-06-14
 categories:
 ---
 
-에티켓
+다양성
 =============
 - - -
-  <sup>date:   2024-06-01</sup>
+  <sup>date:   2024-06-14</sup>
 
  <img src="/contents/paint2.jpg" alt="Description of Image" width="500" height="300">
 
