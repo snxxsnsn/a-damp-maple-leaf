@@ -40,6 +40,17 @@ h6 {
 /**
  * Layout
  */
+.img-box {
+    width: 90%; /* 너비 전체 */
+    text-align: center; /* 내부 요소(이미지)를 가운데 정렬 */
+    padding: 20px; /* 패딩으로 여백 추가 */
+}
+
+.img-box img {
+    max-width: 100%; /* 이미지 최대 너비 제한 */
+    height: auto; /* 높이 자동 조정 */
+}
+
 .profile-container {
     display: flex;
     align-items: flex-start;
