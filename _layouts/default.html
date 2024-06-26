@@ -4,24 +4,16 @@
 <meta http-equiv="X-XSS-Protection"  content="1;mode=block" always>
 <meta http-equiv="Referrer-Policy" content="no-referrer, strict-origin-when-cross-origin">
 
-   {%- include head.html -%}
+  {%- include head.html -%}
 
   <body>
-  {%- include header.html -%}
-     <div class="profile-container">
-       <div class="profile-box">
-            <img src="contents/juice.jpg" alt="juice">
-            <div class="divider"></div> <!-- 구분선 -->
-            <h1>XENA</h1>
-            <sup>2002.08.30</sup>
-            <p>-</p>
-            <p>(｡-_-｡)</p>
-        </div>
     <div class="container">
-       <main>
+
+      {%- include header.html -%}
+
+    <main>
       {{ content }}
     </main>
-    </div>
 
     {%- include footer.html -%}
 
