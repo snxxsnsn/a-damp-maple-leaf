@@ -41,9 +41,10 @@ h6 {
  * Layout
  */
 .img-box {
-    max-width: 30vw;
+    max-width: 24vw;
     margin: 0 auto; /* 상하 마진 없이 좌우 마진 자동으로 설정하여 중앙 정렬 */
     display: flex; /* Flexbox 모델 사용 */
+    margin-bottom: -10px;
     justify-content: center; /* 가로 방향 중앙 정렬 */
     padding: 10px
 }
