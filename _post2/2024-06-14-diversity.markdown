@@ -10,7 +10,7 @@ categories:
 - - -
   <sup>date:   2024-06-14</sup>
 
-<div class="profile-box">
+<div class="img-box">
    <img src="contents/paint2.jpg" alt="paint">
 </div>
 
