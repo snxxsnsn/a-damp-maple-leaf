@@ -41,9 +41,11 @@ h6 {
  * Layout
  */
 .img-box {
-    width: 90%; /* 너비 전체 */
-    text-align: center; /* 내부 요소(이미지)를 가운데 정렬 */
-    padding: 20px; /* 패딩으로 여백 추가 */
+    max-width: 30vw;
+    margin: 0 auto; /* 상하 마진 없이 좌우 마진 자동으로 설정하여 중앙 정렬 */
+    display: flex; /* Flexbox 모델 사용 */
+    justify-content: center; /* 가로 방향 중앙 정렬 */
+    padding: 10px
 }
 
 .img-box img {
